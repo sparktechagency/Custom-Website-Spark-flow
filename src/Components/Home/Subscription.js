@@ -45,7 +45,7 @@ const Subscription = () => {
 
     // Reset animation when the active tab changes
     useEffect(() => {
-        setAnimationClass('-rotate-y-360 ease-in-out duration-[900ms]');
+        setAnimationClass('rotate-y-360 ease-in-out duration-[900ms]');
         const timer = setTimeout(() => {
             setAnimationClass(''); // Reset animation after it's done
         }, 500); // Matches the animation duration

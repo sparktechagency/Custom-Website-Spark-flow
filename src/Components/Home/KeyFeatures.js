@@ -10,6 +10,9 @@ const KeyFeatures = () => {
             <div className='grid xl:grid-cols-2 gap-5 mt-10'>
                 <div>
                     <h2 className='text-2xl font-bold text-gray-700 text-center'>Contractor Features</h2>
+                    <div>
+                        
+                    </div>
                 </div>
                 <div>
                     <h2 className='text-2xl font-bold text-gray-700 text-center'>Subcontractor Features</h2>

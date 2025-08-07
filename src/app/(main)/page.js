@@ -5,6 +5,7 @@ import CountDown from '@/Components/Home/CountDown';
 import Hero from '@/Components/Home/Hero';
 import HowItWork from '@/Components/Home/HowItWork';
 import JobBrowse from '@/Components/Home/JobBrowse';
+import KeyFeatures from '@/Components/Home/KeyFeatures';
 import React from 'react';
 
 const Page = () => {
@@ -16,6 +17,7 @@ const Page = () => {
             <HowItWork />
             <JobBrowse />
             <ContactAndGetWork />
+            <KeyFeatures />
         </main>
     );
 }

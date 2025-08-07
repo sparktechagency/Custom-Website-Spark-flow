@@ -6,8 +6,8 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="container sticky top-0 md:!mt-10 border-b md:border-none z-[999] w-full sm:h-[80px] h-[60px]  xl:h-[100px] backdrop-blur-sm bg-contain px-2 bg-no-repeat bg-gray-50 sm:bg-transparent md:bg-[url('/Images/Home/header.png')] flex items-center ">
-            <div className="w-full flex lg:items-center items-start lg:pt-0 pt-2 justify-between px-4 md:px-0 h-full">
+        <header className="container sticky top-0 md:!mt-10 border-b md:border-none z-[999] w-full sm:h-[80px] h-[60px]  xl:h-[100px] backdrop-blur-sm bg-contain px-2 bg-no-repeat sm:bg-transparent md:bg-[url('/Images/Home/header.png')] flex items-center ">
+            <div className="w-full backdrop-blur-sm flex lg:items-center items-start lg:pt-0 pt-2 justify-between px-4 md:px-0 h-full">
                 {/* Logo */}
                 <div className="text-xl font-bold text-black pl-2 sm:pl-4 md:pl-8 lg:pl-16 xl:pl-28">
                     <Link href="/">
@@ -51,7 +51,7 @@ const Header = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden backdrop-blur-sm bg-opacity-90 px-4 pb-4 space-y-3 text-black text-center absolute top-full left-0 right-0 shadow-lg">
+                <div className="md:hidden bg-white backdrop-blur-sm  px-4 pb-4 space-y-3 text-black text-center absolute top-full left-0 right-0 shadow-lg">
                     <div className="flex flex-col space-y-3 pt-4">
                         <Link
                             href="/"

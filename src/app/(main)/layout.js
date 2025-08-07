@@ -24,8 +24,10 @@ export default function Layout({ children }) {
     return (
         <div>
             <Header />
-            {children}
-            <Footer />
+            <div className="z-[9]">
+                {children}
+                <Footer />
+            </div>
         </div>
     );
 }

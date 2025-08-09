@@ -120,7 +120,7 @@ const Testimonials = () => {
                                 key={index}
                                 className={`w-5 h-5 rounded-full mx-1 cursor-pointer ${currentIndex === index ? "bg-[#5f81e6] " : "bg-gray-300"
                                     }`}
-                                onClick={() => setCurrentIndex(index)} // Clicking a dot changes the slide
+                                onClick={() => setCurrentIndex(index)} 
                             />
                         ))}
                     </div>

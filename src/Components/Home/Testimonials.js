@@ -60,7 +60,7 @@ const Testimonials = () => {
     return (
         <section className="container xl:px-0 px-5 py-10 bg-white">
             <div className="mb-8">
-                <h2 className="text-3xl font-bold">Testimonials</h2>
+                <h2 className="text-3xl sm:text-5xl font-bold text-gray-600 mb-2">Testimonials</h2>
                 <p className="text-gray-500">Best platform for finding reliable subcontractors</p>
             </div>
 

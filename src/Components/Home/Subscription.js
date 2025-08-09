@@ -10,12 +10,12 @@ const Subscription = () => {
     const subscriptionData = {
         contractor: [
             {
-                id: 1, name: 'Basic Plan', price: '$29', duration: 'Monthly', features: 
-                ['Basic features', 
-                    'Up to 10 crew members', 
-                    'Up to 1 project',  
-                    'Up to 1 project', 
-                    'Up to 3 team members', 'Up to 5 team members'],
+                id: 1, name: 'Basic Plan', price: '$29', duration: 'Monthly', features:
+                    ['Basic features',
+                        'Up to 10 crew members',
+                        'Up to 1 project',
+                        'Up to 1 project',
+                        'Up to 3 team members', 'Up to 5 team members'],
                 isPopuler: false
             },
             {

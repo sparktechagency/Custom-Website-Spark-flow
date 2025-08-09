@@ -7,6 +7,7 @@ import HowItWork from '@/Components/Home/HowItWork';
 import JobBrowse from '@/Components/Home/JobBrowse';
 import KeyFeatures from '@/Components/Home/KeyFeatures';
 import Subscription from '@/Components/Home/Subscription';
+import Testimonials from '@/Components/Home/Testimonials';
 import React from 'react';
 
 const Page = () => {
@@ -20,6 +21,7 @@ const Page = () => {
             <ContactAndGetWork />
             <KeyFeatures />
             <Subscription />
+            <Testimonials />
         </main>
     );
 }

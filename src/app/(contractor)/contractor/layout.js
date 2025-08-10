@@ -3,7 +3,6 @@ import "./../../globals.css";
 import Header from "@/Components/Common/Header";
 import Footer from "@/Components/Common/Footer";
 import ContractorHeader from "@/Components/Contractor/ContractorHeader";
-import ContractorFooter from "@/Components/Contractor/ContractorFooter";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -28,10 +27,9 @@ export default function Layout({ children }) {
         <div className="container">
             <ContractorHeader />
             <hr className="border border-[#ececec] my-5 " />
-            <div className="z-[9] ">
+            <div className="z-[9]">
                 {children}
             </div>
-            <ContractorFooter />
         </div>
     );
 }

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 
@@ -32,29 +32,46 @@ const testimonials = [
 
 const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsPerSlide, setItemsPerSlide] = useState(1);
 
     // Function to get the number of items per slide based on screen size (responsive)
     const getItemsPerSlide = () => {
-        // Check screen width and return either 1 or 2 items per slide
-        if (window.innerWidth >= 768) {  // Medium screen (md) or larger
-            return 2;
-        } else {
-            return 1;  // Small screen
+        if (typeof window !== 'undefined') {
+            if (window.innerWidth >= 768) {  // Medium screen (md) or larger
+                return 2;
+            } else {
+                return 1;  // Small screen
+            }
         }
+        return 1; // Fallback if window is not available
     };
+
+    // Update items per slide on mount and window resize
+    useEffect(() => {
+        const updateItemsPerSlide = () => {
+            setItemsPerSlide(getItemsPerSlide());
+        };
+
+        // Set items per slide initially
+        updateItemsPerSlide();
+
+        // Update items per slide on window resize
+        window.addEventListener('resize', updateItemsPerSlide);
+
+        // Cleanup event listener
+        return () => {
+            window.removeEventListener('resize', updateItemsPerSlide);
+        };
+    }, []);
 
     // Function to go to the next slide
     const nextSlide = () => {
-        const itemsPerSlide = getItemsPerSlide();
-        setCurrentIndex((prevIndex) => (prevIndex + itemsPerSlide) % testimonials.length); // Increment by itemsPerSlide
+        setCurrentIndex((prevIndex) => (prevIndex + itemsPerSlide) % testimonials.length);
     };
 
     // Function to go to the previous slide
     const prevSlide = () => {
-        const itemsPerSlide = getItemsPerSlide();
-        setCurrentIndex(
-            (prevIndex) => (prevIndex - itemsPerSlide + testimonials.length) % testimonials.length // Decrement by itemsPerSlide
-        );
+        setCurrentIndex((prevIndex) => (prevIndex - itemsPerSlide + testimonials.length) % testimonials.length);
     };
 
     return (
@@ -68,7 +85,7 @@ const Testimonials = () => {
                 {/* Use grid layout for responsiveness */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Display testimonials */}
-                    {testimonials.slice(currentIndex, currentIndex + getItemsPerSlide()).map((testimonial, index) => (
+                    {testimonials.slice(currentIndex, currentIndex + itemsPerSlide).map((testimonial, index) => (
                         <div
                             className="bg-gray-100 duration-700 rounded-2xl grid md:grid-cols-3 gap-5 border border-gray-200"
                             key={index}
@@ -120,7 +137,7 @@ const Testimonials = () => {
                                 key={index}
                                 className={`w-5 h-5 rounded-full mx-1 cursor-pointer ${currentIndex === index ? "bg-[#5f81e6] " : "bg-gray-300"
                                     }`}
-                                onClick={() => setCurrentIndex(index)} 
+                                onClick={() => setCurrentIndex(index)}
                             />
                         ))}
                     </div>

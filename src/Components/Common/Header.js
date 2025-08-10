@@ -3,7 +3,18 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Header = () => {
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpenMenu(!isOpenMenu);
+    };
+    
     const [isOpen, setIsOpen] = useState(false);
+
+    const toggleModalLogin = () => {
+        setIsOpen(!isOpen);
+        localStorage.setItem('action', isOpen);
+    };
 
     return (
         <header className="container sticky top-0 md:!mt-10 border-b md:border-none z-[999] w-full sm:h-[80px] h-[60px]  xl:h-[100px] backdrop-blur-sm bg-contain px-2 bg-no-repeat sm:bg-transparent md:bg-[url('/Images/Home/header.png')] flex items-center ">
@@ -26,7 +37,7 @@ const Header = () => {
 
                 {/* Login Button (Desktop) */}
                 <div className="hidden md:block">
-                    <button className="px-1 md:px-2 mr-3 lg:px-4 py-2 cursor-pointer transition h-full flex items-center hover:opacity-80">
+                    <button onClick={toggleModalLogin} className="px-1 md:px-2 mr-3 lg:px-4 py-2 cursor-pointer transition h-full flex items-center hover:opacity-80">
                         <img className='w-20 md:w-24 lg:w-48 xl:w-72 max-w-none' src="/Images/Home/loginbutton.png" alt="Login" />
                     </button>
                 </div>
@@ -34,12 +45,12 @@ const Header = () => {
                 {/* Hamburger Menu (Mobile) */}
                 <div className="md:hidden">
                     <button
-                        onClick={() => setIsOpen(!isOpen)}
+                        onClick={() => setIsOpenMenu(!isOpenMenu)}
                         className="text-black focus:outline-none p-2"
                         aria-label="Toggle menu"
                     >
                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {isOpen ? (
+                            {isOpenMenu ? (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             ) : (
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -50,7 +61,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
+            {isOpenMenu && (
                 <div className="md:hidden bg-white backdrop-blur-sm  px-4 pb-4 space-y-3 text-black text-center absolute top-full left-0 right-0 shadow-lg">
                     <div className="flex flex-col space-y-3 pt-4">
                         <Link
@@ -89,7 +100,7 @@ const Header = () => {
                             Contact
                         </Link>
                         <div className="pt-2">
-                            <button className="px-4 py-2 cursor-pointer transition flex items-center justify-center hover:opacity-80 mx-auto">
+                            <button onClick={toggleModalLogin} className="px-4 py-2 cursor-pointer transition flex items-center justify-center hover:opacity-80 mx-auto">
                                 <img className='w-32 max-w-[200px]' src="/Images/Home/loginbutton.png" alt="Login" />
                             </button>
                         </div>

@@ -21,9 +21,11 @@ export const metadata = {
 // not root layout this is main layout
 
 export default function Layout({ children }) {
+
     return (
         <div>
             <Header />
+
             <div className="z-[9]">
                 {children}
                 <Footer />

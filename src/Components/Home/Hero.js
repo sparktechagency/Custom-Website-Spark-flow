@@ -34,7 +34,7 @@ const Hero = () => {
                 </div>
             </section>
             <div className=''>
-                <AuthCards action={isOpen} />
+                <AuthCards action={isOpen} toggleModal={toggleModal} />
             </div>
         </div>
     );

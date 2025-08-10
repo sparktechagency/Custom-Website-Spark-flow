@@ -1,9 +1,18 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
+import AuthCards from './AuthCards';
 
 const Hero = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <div>
-            <section className='container lx:px-0 px-5 grid xl:grid-cols-2 items-center xl:gap-4'>
+        <div className='relative container  overflow-hidden'>
+            <section className=' lx:px-0 px-5 grid xl:grid-cols-2 items-center xl:gap-4'>
                 <div className="relative bg-cover bg-center min-h-[60vh]  bg-no-repeat">
                     <img className='w-full' src="/Images/Home/hero-banner.png" alt="" />
                     <div className='absolute top-0 left-0 xl:p-10 p-5 w-full h-full flex items-start xl:justify-center xl:mt-0 mt-8 flex-col'>
@@ -14,7 +23,7 @@ const Hero = () => {
                             <button className=' cursor-pointer xl:w-72 text-white '>
                                 <img className='hover:opacity-80' src="/Images/Home/get-start.png" alt="" />
                             </button>
-                            <button className=' cursor-pointer xl:w-72 text-white'>
+                            <button onClick={toggleModal} className=' cursor-pointer xl:w-72 text-white'>
                                 <img src="/Images/Home/contact-us.png" alt="" />
                             </button>
                         </div>
@@ -24,6 +33,9 @@ const Hero = () => {
                     <img className='lg:w-4/6' src="/Images/Home/Constructionworker-pana1.png" alt="" />
                 </div>
             </section>
+            <div className=''>
+                <AuthCards action={isOpen} />
+            </div>
         </div>
     );
 }

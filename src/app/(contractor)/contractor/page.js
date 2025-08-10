@@ -1,4 +1,5 @@
 'use client';
+import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
 import icons from '@/icons/icon';
 import React, { useState } from 'react';
 
@@ -49,13 +50,13 @@ const Page = () => {
                     onClick={() => handleTabChange('subscription')}
                     className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'subscription' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
                 >
-                   {icons.subscription} Subscription
+                    {icons.subscription} Subscription
                 </button>
             </div>
 
             {/* Content based on Active Tab */}
             <div>
-                {activeTab === 'dashboard' && <div>Dashboard Content</div>}
+                {activeTab === 'dashboard' && <ContractorDashboard />}
                 {activeTab === 'allJobs' && <div>All Jobs Content</div>}
                 {activeTab === 'jobRequest' && <div>Job Request Content</div>}
                 {activeTab === 'subcontractors' && <div>Subcontractors Content</div>}

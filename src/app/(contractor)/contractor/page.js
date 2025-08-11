@@ -1,4 +1,5 @@
 'use client';
+import AllJobs from '@/Components/Contractor/AllJobs';
 import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
 import icons from '@/icons/icon';
 import React, { useState } from 'react';
@@ -57,7 +58,7 @@ const Page = () => {
             {/* Content based on Active Tab */}
             <div>
                 {activeTab === 'dashboard' && <ContractorDashboard />}
-                {activeTab === 'allJobs' && <div>All Jobs Content</div>}
+                {activeTab === 'allJobs' && <AllJobs />}
                 {activeTab === 'jobRequest' && <div>Job Request Content</div>}
                 {activeTab === 'subcontractors' && <div>Subcontractors Content</div>}
                 {activeTab === 'reviews' && <div>Reviews Content</div>}

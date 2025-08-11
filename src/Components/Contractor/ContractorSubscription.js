@@ -48,9 +48,7 @@ const ContractorSubscription = () => {
     }, [activeTab]); // Run when activeTab changes
 
     return (
-        <section className='container xl:px-0 px-5 py-8 md:py-12'>
-          
-
+        <section className='container xl:px-0 px-5 py-8 md:py-5'>
             {/* Subscription Options */}
             <div className='grid lg:grid-cols-2 xl:grid-cols-3 xl:gap-10 gap-5'>
                 {subscriptionData[activeTab].map((plan) => (

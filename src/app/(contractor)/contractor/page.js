@@ -4,6 +4,7 @@ import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
 import JobRequest from '@/Components/Contractor/ContractorJobRequest ';
 import ContractorReciews from '@/Components/Contractor/ContractorReciews';
 import Subcontractors from '@/Components/Contractor/ContractorSubcontractors';
+import ContractorSubscription from '@/Components/Contractor/ContractorSubscription';
 import icons from '@/icons/icon';
 import React, { useState } from 'react';
 
@@ -65,7 +66,7 @@ const Page = () => {
                 {activeTab === 'jobRequest' && <JobRequest />}
                 {activeTab === 'subcontractors' && <Subcontractors />}
                 {activeTab === 'reviews' && <ContractorReciews />}
-                {activeTab === 'subscription' && <div>Subscription Content</div>}
+                {activeTab === 'subscription' && <ContractorSubscription />}
             </div>
         </section>
     );

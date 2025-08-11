@@ -50,15 +50,15 @@ const JobRequest = () => {
 
     return requestsToDisplay.map((job, index) => (
       <tr key={index}>
-        <td>{job.id}</td>
-        <td>{job.subContractor}</td>
-        <td>{job.email}</td>
-        <td>{job.service}</td>
-        <td>{job.date}</td>
-        <td>
+        <td className='py-3 px-5'>{job.id}</td>
+        <td className='py-3 px-5'>{job.subContractor}</td>
+        <td className='py-3 px-5'>{job.email}</td>
+        <td className='py-3 px-5'>{job.service}</td>
+        <td className='py-3 px-5'>{job.date}</td>
+        <td className='py-3 px-5 flex items-center justify-center gap-2'>
           <button className="bg-green-500 text-white px-3 py-1 rounded-md">Accept</button>
           <button className="bg-red-600 text-white px-3 py-1 rounded-md">Cancel</button>
-          <button className="bg-blue-600 text-white px-3 py-1 rounded-md">Message</button>
+          <button className="bg-[#203f9a] text-white px-3 py-1 rounded-md">Message</button>
         </td>
       </tr>
     ));
@@ -68,7 +68,7 @@ const JobRequest = () => {
     <div className="container mx-auto p-4">
       {/* Tabs */}
       <div className="mb-4 flex justify-between items-center">
-        <div className="tabs flex space-x-4">
+        <div className="tabs flex flex-wrap gap-2 space-x-4">
           {['All', 'Roofers', 'Glaziers', 'Painters', 'Plumber'].map((tab) => (
             <button
               key={tab}
@@ -85,13 +85,13 @@ const JobRequest = () => {
       <div className="overflow-x-auto shadow-md rounded-lg">
         <table className="min-w-full table-auto">
           <thead>
-            <tr className="bg-gray-800 text-white">
-              <th className="px-4 py-2">S/N</th>
-              <th className="px-4 py-2">Sub Contractor</th>
-              <th className="px-4 py-2">Email</th>
-              <th className="px-4 py-2">Service</th>
-              <th className="px-4 py-2">Date</th>
-              <th className="px-4 py-2">Action</th>
+            <tr className="bg-gray-100 text-[#203f9a]">
+              <th className="px-4 py-5">S/N</th>
+              <th className="px-4 py-5">Sub Contractor</th>
+              <th className="px-4 py-5">Email</th>
+              <th className="px-4 py-5">Service</th>
+              <th className="px-4 py-5">Date</th>
+              <th className="px-4 py-5">Action</th>
             </tr>
           </thead>
           <tbody className="bg-white">
@@ -106,8 +106,8 @@ const JobRequest = () => {
           <span>SHOWING {((currentPage - 1) * rowsPerPage) + 1}-{Math.min(currentPage * rowsPerPage, jobRequests[activeTab].length)} OF {jobRequests[activeTab].length}</span>
         </div>
         <div>
-          <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className="px-4 py-2 bg-gray-300 rounded-md">Previous</button>
-          <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} className="px-4 py-2 bg-gray-300 rounded-md ml-2">Next</button>
+          <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className="px-4 py-2 bg-gray-300 rounded-md cursor-pointer">Previous</button>
+          <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} className="px-4 py-2 bg-gray-300 rounded-md ml-2 cursor-pointer">Next</button>
         </div>
       </div>
     </div>

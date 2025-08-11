@@ -1,4 +1,4 @@
- 
+
 
 'use client';
 import React, { useState, useEffect } from 'react';
@@ -29,7 +29,7 @@ const ContractorSubscription = () => {
                 isPopuler: false
             },
         ]
-       
+
     };
 
     // Handle tab click
@@ -54,20 +54,22 @@ const ContractorSubscription = () => {
                 {subscriptionData[activeTab].map((plan) => (
                     <div key={plan.id} className={`relative flex ${animationClass}`}>
                         <img className='w-full lg:h-full h-[530px] relative' src="/Images/Home/subscriptions-bg.png" alt="" />
-                        <div className='absolute top-0 left-0 p-10'>
-                            <div className='flex items-center justify-between'>
-                                <p className='text-5xl font-semibold text-gray-900'>{plan.price} <span className='text-base'>/ {plan.duration}</span></p>
-                                <span>
-                                    {plan?.isPopuler && <span className=' bg-[#bac3de] text-[#333] text-xl font-semibold px-10 py-3 rounded-lg'>Popular</span>}
-                                </span>
+                        <div className='absolute flex flex-col justify-between h-full  top-0 left-0 p-10'>
+                            <div>
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-5xl font-semibold text-gray-900'>{plan.price} <span className='text-base'>/ {plan.duration}</span></p>
+                                    <span>
+                                        {plan?.isPopuler && <span className=' bg-[#bac3de] text-[#333] text-xl font-semibold px-10 py-3 rounded-lg'>Popular</span>}
+                                    </span>
+                                </div>
+                                <h3 className='text-2xl my-5 font-semibold text-gray-600'>{plan.name}</h3>
+                                <img className='w-full' src="/Images/Home/sub-line.png" alt="" />
+                                <ul className='list-disc ml-5 mt-5 '>
+                                    {plan.features.map((feature, index) => (
+                                        <li key={index} className='text-lg leading-[1.6] text-gray-600'>{feature}</li>
+                                    ))}
+                                </ul>
                             </div>
-                            <h3 className='text-2xl my-5 font-semibold text-gray-600'>{plan.name}</h3>
-                            <img className='w-full' src="/Images/Home/sub-line.png" alt="" />
-                            <ul className='list-disc ml-5 mt-5 '>
-                                {plan.features.map((feature, index) => (
-                                    <li key={index} className='text-lg leading-[1.4] text-gray-600'>{feature}</li>
-                                ))}
-                            </ul>
                             <button className='px-10 py-3 mt-5 text-white bg-[#bac3de] hover:bg-[#203f9a] cursor-pointer duration-300 w-full rounded-lg '>Get Started</button>
                         </div>
                     </div>

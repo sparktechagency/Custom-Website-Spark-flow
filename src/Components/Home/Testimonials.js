@@ -43,7 +43,7 @@ const Testimonials = () => {
                 return 1;  // Small screen
             }
         }
-        return 1; // Fallback if window is not available
+        return 1; 
     };
 
     // Update items per slide on mount and window resize

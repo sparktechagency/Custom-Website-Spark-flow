@@ -19,6 +19,7 @@ const ContractorHeader = () => {
                     <option value="category1">Category 1</option>
                     <option value="category2">Category 2</option>
                     <option value="category3">Category 3</option>
+                    <option value="category3">Category 4</option>
                 </select>
                 <Link href="/contractor/message" className='cursor-pointer px-2 text-white py-2 border bg-[#203f9a] rounded-md'>{icons.message}</Link>
                 <Link href="/contractor/notifications" className='cursor-pointer px-2 text-white py-2 border bg-[#203f9a] rounded-md'>{icons.notification}</Link>

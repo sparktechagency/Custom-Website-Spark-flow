@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContractorHeader = () => {
     return (
-        <header className=' flex items-center justify-between py-5'>
+        <header className=' flex flex-wrap gap-5 items-center justify-center md:justify-between py-5'>
             <div className='flex items-center gap-5'>
                 <img className='w-12' src="/Images/Home/logo.png" alt="" />
                 <div className='relative border border-[#203f9a] rounded-md'>

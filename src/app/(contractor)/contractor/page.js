@@ -1,6 +1,7 @@
 'use client';
 import AllJobs from '@/Components/Contractor/AllJobs';
 import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
+import JobRequest from '@/Components/Contractor/JobRequest ';
 import icons from '@/icons/icon';
 import React, { useState } from 'react';
 
@@ -16,7 +17,7 @@ const Page = () => {
     return (
         <section className="">
             {/* Tab Navigation */}
-            <div className="flex space-x-4 mb-4 border-b-2 border-gray-200">
+            <div className="flex space-x-4 flex-wrap mb-4 border-b-2 border-gray-200">
                 <button
                     onClick={() => handleTabChange('dashboard')}
                     className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'dashboard' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
@@ -59,7 +60,7 @@ const Page = () => {
             <div>
                 {activeTab === 'dashboard' && <ContractorDashboard />}
                 {activeTab === 'allJobs' && <AllJobs />}
-                {activeTab === 'jobRequest' && <div>Job Request Content</div>}
+                {activeTab === 'jobRequest' && <JobRequest />}
                 {activeTab === 'subcontractors' && <div>Subcontractors Content</div>}
                 {activeTab === 'reviews' && <div>Reviews Content</div>}
                 {activeTab === 'subscription' && <div>Subscription Content</div>}

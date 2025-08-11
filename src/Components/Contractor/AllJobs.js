@@ -20,7 +20,7 @@ const AllJobs = () => {
                 location: 'Patira, Dhaka - 1229 Bangladesh',
                 salary: '$50 - $150/Day',
                 vacancies: '10/12 Vacancy',
-                image: 'https://scoutnetworkblog.com/wp-content/uploads/2018/11/Plumber-Sink-201709-003.jpg',
+                image: 'https://www.obrien.com.au/wp-content/uploads/2021/12/A-Plumber-At-Work.jpg',
             },
 
         ],
@@ -39,7 +39,7 @@ const AllJobs = () => {
                 location: 'Patira, Dhaka - 1229 Bangladesh',
                 salary: '$50 - $150/Day',
                 vacancies: '10/12 Vacancy',
-                image: 'https://scoutnetworkblog.com/wp-content/uploads/2018/11/Plumber-Sink-201709-003.jpg',
+                image: 'https://scoutnetworkblog.com/wp-content/uploads/2018/11/Cleaning-Liquid-201806-001.jpg',
             },
         ],
         Painters: [
@@ -57,7 +57,7 @@ const AllJobs = () => {
                 location: 'Patira, Dhaka - 1229 Bangladesh',
                 salary: '$50 - $150/Day',
                 vacancies: '10/12 Vacancy',
-                image: 'https://scoutnetworkblog.com/wp-content/uploads/2018/11/Plumber-Sink-201709-003.jpg',
+                image: 'https://www.obrien.com.au/wp-content/uploads/2021/12/A-Plumber-At-Work.jpg',
             },
         ],
     };
@@ -80,8 +80,8 @@ const AllJobs = () => {
     return (
         <div className="container mx-auto p-4">
             {/* Tabs */}
-            <div className="mb-4 flex justify-between items-center">
-                <div className="tabs flex space-x-4">
+            <div className="mb-4 flex flex-wrap gap-3 justify-between items-center">
+                <div className="tabs flex-wrap flex items-start space-x-4 space-y-2">
                     {['All', 'Roofers', 'Glaziers', 'Painters', 'Plumber'].map((tab) => (
                         <button
                             key={tab}
@@ -96,7 +96,7 @@ const AllJobs = () => {
                     onClick={() => setIsModalOpen(true)} // Open modal when "Add Job" is clicked
                     className="flex items-center gap-3 cursor-pointer border-2 border-[#203f9a] text-[#203f9a] font-semibold px-4 py-2 rounded-md"
                 >
-                    {icons.add} Add Job
+                    {icons.add} Add New
                 </button>
             </div>
 
@@ -121,7 +121,7 @@ const AllJobs = () => {
             {/* Modal for Add Job */}
             {isModalOpen && (
                 <div onClick={() => setIsModalOpen(false)} className="fixed inset-0 bg-[rgba(0,0,0,0.6)] bg-opacity-50 flex justify-center items-center z-50">
-                    <div onClick={(e) => e.stopPropagation()} className="bg-white p-6 rounded-lg w-96">
+                    <div onClick={(e) => e.stopPropagation()} className="bg-white p-6 rounded-lg shadow">
                         <h2 className="text-xl font-semibold mb-4">Add New Job</h2>
                         <div className="mb-4">
                             <label className="block text-sm font-medium mb-2">Job Title</label>

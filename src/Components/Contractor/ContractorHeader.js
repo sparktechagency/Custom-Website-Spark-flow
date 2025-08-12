@@ -42,12 +42,12 @@ const ContractorHeader = () => {
                     {
                         showUser &&
                         <div className='absolute border border-gray-300 z-10 top-14 min-w-[300px] right-0 px-2 py-5 bg-gray-100 rounded-lg'>
-                            <img className='w-28 mx-auto rounded-lg' src="https://randomuser.me/api/portraits/men/43.jpg" alt="" />
+                            <img className='w-28 mx-auto rounded-lg' src="https://scontent.fdac24-5.fna.fbcdn.net/v/t39.30808-1/515436369_2512866372423820_6912327461078916818_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeE9lRhKqnIY288VL7I5LwZeFE9LNyGOjeIUT0s3IY6N4nfN6ROk4lNH8befPQzCdvkzOix1chgKD38atiuJjXJT&_nc_ohc=uYCWSOwCa2MQ7kNvwF-WKrB&_nc_oc=AdncIJwN00FZiI1yECBVztXgKQVqPp6z9iM4GfbCGbCbUONDZPgafAXzkHOc-baFoQk&_nc_zt=24&_nc_ht=scontent.fdac24-5.fna&_nc_gid=6EIrkGUjxPpVyjoGL_tbfg&oh=00_AfVEd3Y6Oj7eNKfSKqNcGRi2qkKrMPRyZvbt48gTSozq1A&oe=68A0DE60" alt="" />
                             <h2 className='text-center mt-2 text-2xl capitalize font-semibold'>nimur rahman nerob</h2>
                             <h3 className='text-center text-[#203f9a] font-semibold'>Contractor</h3>
                             <div className='bg-white mt-5 font-semibold py-2 px-5 rounded-lg flex flex-col gap-2 '>
                                 <Link onClick={handleSowUser} href={'/contractor/profile'} className='flex items-center gap-2 hover:text-[#203f9a] py-2 cursor-pointer border-b border-gray-300'>
-                                    <img className='w-6 rounded-full' src="https://randomuser.me/api/portraits/men/43.jpg" alt="" />
+                                    <img className='w-6 rounded-full' src="https://scontent.fdac24-5.fna.fbcdn.net/v/t39.30808-1/515436369_2512866372423820_6912327461078916818_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeE9lRhKqnIY288VL7I5LwZeFE9LNyGOjeIUT0s3IY6N4nfN6ROk4lNH8befPQzCdvkzOix1chgKD38atiuJjXJT&_nc_ohc=uYCWSOwCa2MQ7kNvwF-WKrB&_nc_oc=AdncIJwN00FZiI1yECBVztXgKQVqPp6z9iM4GfbCGbCbUONDZPgafAXzkHOc-baFoQk&_nc_zt=24&_nc_ht=scontent.fdac24-5.fna&_nc_gid=6EIrkGUjxPpVyjoGL_tbfg&oh=00_AfVEd3Y6Oj7eNKfSKqNcGRi2qkKrMPRyZvbt48gTSozq1A&oe=68A0DE60" alt="" />
                                     <span>Profile</span>
                                 </Link>
                                 {/* setting  */}

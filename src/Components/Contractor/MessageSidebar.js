@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link';
 import React from 'react';
 
 const MessageSidebar = () => {
@@ -28,7 +29,8 @@ const MessageSidebar = () => {
 
             <div className="space-y-4">
                 {users.map((user, index) => (
-                    <div
+                    <Link
+                        href={`/contractor/${index}`}
                         key={index}
                         className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
                     >
@@ -41,7 +43,7 @@ const MessageSidebar = () => {
                             <h3 className="font-medium text-lg">{user.name}</h3>
                             <p className="text-sm text-gray-600">{user.role}</p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

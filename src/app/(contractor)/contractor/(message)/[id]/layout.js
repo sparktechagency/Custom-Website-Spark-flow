@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 p-4 lg:p-0">
             <div className="md:col-span-3">
                 <MessageSidebar />
             </div>

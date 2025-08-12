@@ -41,8 +41,7 @@ const MessageInput = () => {
                 <div className='flex items-end justify-end space-x-2'>
                     <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
-                    </p>
-                    <img className='w-5 h-5 rounded-lg' src="https://randomuser.me/api/portraits/men/46.jpg" alt="" />
+                    </p> 
                 </div>
                 <div className='flex items-start space-x-2'>
                     <img className='w-10 h-10 rounded-lg' src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
@@ -57,8 +56,7 @@ const MessageInput = () => {
                 <div className='flex items-end justify-end space-x-2'>
                     <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
                        I want to work with you
-                    </p>
-                    <img className='w-5 h-5 rounded-lg' src="https://randomuser.me/api/portraits/men/46.jpg" alt="" />
+                    </p> 
                 </div>
 
             </div>

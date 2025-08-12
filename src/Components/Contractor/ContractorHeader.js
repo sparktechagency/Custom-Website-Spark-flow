@@ -55,6 +55,10 @@ const ContractorHeader = () => {
                                     <span>{icons.setting}</span>
                                     <span>Setting</span>
                                 </Link>
+                                <Link onClick={handleSowUser} href={'/contractor/terms-privacy'} className='flex items-center gap-2 hover:text-[#203f9a] py-2 cursor-pointer border-b border-gray-300'>
+                                    <span>{icons.termsAndPrivacy}</span>
+                                    <span>Terms & Privacy </span>
+                                </Link>
                                 {/* logout  */}
                                 <Link onClick={handleSowUser} href={'/'} className='flex items-center justify-center gap-2 text-[#ff0000] hover:text-[#c00202] py-2 cursor-pointer'>
                                     <span>{icons.logout}</span>

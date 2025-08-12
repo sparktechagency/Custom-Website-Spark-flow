@@ -35,7 +35,7 @@ const MessageSidebar = () => {
                         <img
                             src={user.image}
                             alt={user.name}
-                            className="w-12 h-12 rounded-full object-cover"
+                            className="w-12 h-12 rounded-lg object-cover"
                         />
                         <div>
                             <h3 className="font-medium text-lg">{user.name}</h3>

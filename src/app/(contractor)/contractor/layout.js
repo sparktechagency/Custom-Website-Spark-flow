@@ -27,7 +27,7 @@ export default function Layout({ children }) {
         <div className="container">
             <ContractorHeader />
             <hr className="border border-[#ececec] my-5 " />
-            <div className="z-[9]">
+            <div className="z-[9] relative">
                 {children}
             </div>
         </div>

@@ -29,7 +29,7 @@ const MessageInput = () => {
     return (
         <div className="w-full border-2 border-gray-100 rounded-lg flex flex-col justify-between p-2">
 
-            <div className='flex flex-col gap-5'>
+            <div className='flex  flex-col gap-5 max-h-[75vh] overflow-x-auto'>
                 {/* Sample messages (can be dynamic in real use) */}
                 <div className='flex items-start space-x-2'>
                     <img className='w-10 h-10 rounded-lg' src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
@@ -37,7 +37,6 @@ const MessageInput = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
                     </p>
                 </div>
-
                 <div className='flex items-end justify-end space-x-2'>
                     <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
@@ -52,7 +51,56 @@ const MessageInput = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
                     </p>
                 </div>
-
+                <div className='flex items-end justify-end space-x-2'>
+                    <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
+                       I want to work with you
+                    </p> 
+                </div>
+                <div className='flex items-start space-x-2'>
+                    <img className='w-10 h-10 rounded-lg' src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
+                    <p className='text-sm w-2/3 max-w-[600px] bg-blue-100 rounded-lg p-2'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                    </p>
+                </div>
+                <div className='flex items-end justify-end space-x-2'>
+                    <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                    </p> 
+                </div>
+                <div className='flex items-start space-x-2'>
+                    <img className='w-10 h-10 rounded-lg' src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
+                    <p className='text-sm w-2/3 max-w-[600px] bg-blue-100 rounded-lg p-2'>
+                        Demo ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                        demo message 100 word need to write
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                    </p>
+                </div>
+                <div className='flex items-end justify-end space-x-2'>
+                    <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
+                       I want to work with you
+                    </p> 
+                </div>
+                <div className='flex items-start space-x-2'>
+                    <img className='w-10 h-10 rounded-lg' src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
+                    <p className='text-sm w-2/3 max-w-[600px] bg-blue-100 rounded-lg p-2'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                    </p>
+                </div>
+                <div className='flex items-end justify-end space-x-2'>
+                    <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                    </p> 
+                </div>
+                <div className='flex items-start space-x-2'>
+                    <img className='w-10 h-10 rounded-lg' src="https://randomuser.me/api/portraits/men/41.jpg" alt="" />
+                    <p className='text-sm w-2/3 max-w-[600px] bg-blue-100 rounded-lg p-2'>
+                        Demo ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                        demo message 100 word need to write
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aspernatur eaque blanditiis veniam, cum modi?
+                    </p>
+                </div>
                 <div className='flex items-end justify-end space-x-2'>
                     <p className='text-sm w-2/3 max-w-[600px] bg-green-100 rounded-lg p-2'>
                        I want to work with you

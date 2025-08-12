@@ -1,8 +1,16 @@
+'use client';
 import icons from '@/icons/icon';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ContractorHeader = () => {
+
+    const [showUser, setShowUser] = useState(false);
+    const handleSowUser = () => {
+        setShowUser(!showUser);
+        console.log('show user');
+    }
+
     return (
         <header className=' flex flex-wrap gap-5 items-center justify-center md:justify-between py-5'>
             <div className='flex items-center gap-5'>
@@ -21,11 +29,41 @@ const ContractorHeader = () => {
                     <option value="category3">Category 3</option>
                     <option value="category3">Category 4</option>
                 </select>
-                <Link href="/contractor/message" className='cursor-pointer px-2 text-white py-2 border bg-[#203f9a] rounded-md'>{icons.message}</Link>
-                <Link href="/contractor/notifications" className='cursor-pointer px-2 text-white py-2 border bg-[#203f9a] rounded-md'>{icons.notification}</Link>
-                <Link href="/contractor/profile">
-                    <img className='w-12 cursor-pointer' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtu74pEiq7ofeQeTsco0migV16zZoBwSlGg&s" alt="" />
+                <Link href="/contractor/message" className='cursor-pointer px-2 relative text-white py-2 border bg-[#203f9a] rounded-md'>
+                    {icons.message}
+                    <span className='absolute top-2 right-2 bg-red-600 w-2 h-2 rounded-full'></span>
                 </Link>
+                <Link href="/contractor/notifications" className='cursor-pointer px-2 relative text-white py-2 border bg-[#203f9a] rounded-md'>
+                    {icons.notification}
+                    <span className='absolute top-2 right-2 bg-red-600 w-2 h-2 rounded-full'></span>
+                </Link>
+                <div className='relative'>
+                    <img onClick={handleSowUser} className='w-12 cursor-pointer' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtu74pEiq7ofeQeTsco0migV16zZoBwSlGg&s" alt="" />
+                    {
+                        showUser &&
+                        <div className='absolute border border-gray-300 z-10 top-14 min-w-[300px] right-0 px-2 py-5 bg-gray-100 rounded-lg'>
+                            <img className='w-28 mx-auto rounded-lg' src="https://randomuser.me/api/portraits/men/43.jpg" alt="" />
+                            <h2 className='text-center mt-2 text-2xl capitalize font-semibold'>nimur rahman nerob</h2>
+                            <h3 className='text-center text-[#203f9a] font-semibold'>Contractor</h3>
+                            <div className='bg-white mt-5 font-semibold py-2 px-5 rounded-lg flex flex-col gap-2 '>
+                                <Link onClick={handleSowUser} href={'/contractor/profile'} className='flex items-center gap-2 hover:text-[#203f9a] py-2 cursor-pointer border-b border-gray-300'>
+                                    <img className='w-6 rounded-full' src="https://randomuser.me/api/portraits/men/43.jpg" alt="" />
+                                    <span>Profile</span>
+                                </Link>
+                                {/* setting  */}
+                                <Link onClick={handleSowUser} href={'/contractor/setting'} className='flex items-center gap-2 hover:text-[#203f9a] py-2 cursor-pointer border-b border-gray-300'>
+                                    <span>{icons.setting}</span>
+                                    <span>Setting</span>
+                                </Link>
+                                {/* logout  */}
+                                <Link onClick={handleSowUser} href={'/'} className='flex items-center justify-center gap-2 text-[#ff0000] hover:text-[#c00202] py-2 cursor-pointer'>
+                                    <span>{icons.logout}</span>
+                                    <span>Logout</span>
+                                </Link>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </header>
     );

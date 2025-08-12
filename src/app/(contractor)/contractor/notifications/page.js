@@ -56,7 +56,7 @@ const Page = () => {
         {currentNotifications.map((notification) => (
           <div
             key={notification.id}
-            className={`flex items-start space-x-4 p-3 cursor-pointer rounded-lg ${!notification.read ? 'bg-gray-200' : 'bg-white'}  border-2 border-gray-100`}
+            className={`flex items-start space-x-4 p-3 cursor-pointer rounded-lg ${!notification.read ? 'bg-[#203f9a1e]' : 'bg-white'}  border-2 border-[#203f9a1e]`}
           >
             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-300">
               {/* Notification Icon */}

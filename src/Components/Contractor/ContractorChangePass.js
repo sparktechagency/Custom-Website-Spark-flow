@@ -37,8 +37,6 @@ const ContractorChangePass = () => {
         newOtp[index] = value;
         setOtp(newOtp);
 
-        
-        // Focus on the next input if the current one is filled
         if (value && index < 5) {
             document.getElementById(`otp-field-${index + 1}`).focus();
         }

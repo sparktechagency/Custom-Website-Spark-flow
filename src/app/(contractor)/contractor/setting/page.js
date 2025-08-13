@@ -1,4 +1,5 @@
 'use client';
+import ContractorChangePass from '@/Components/Contractor/ContractorChangePass';
 import React, { useState } from 'react';
 
 const Page = () => {
@@ -38,11 +39,7 @@ const Page = () => {
                     {/* Tab Content */}
                     {activeTab === '1' && (
                         <div className="space-y-4 p-5 bg-gray-200 rounded-r-xl rounded-bl-xl">
-                            <h3 className="text-xl font-semibold">Change Password</h3>
-                            <p>
-                                Change your account password to keep it secure.
-                            </p>
-                            {/* Add more content or form elements here */}
+                             <ContractorChangePass />
                         </div>
                     )}
                     {activeTab === '2' && (

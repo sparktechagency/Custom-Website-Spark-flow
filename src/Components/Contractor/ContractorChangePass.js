@@ -81,14 +81,14 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleChangePassword}
-                        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                        className="w-full py-2 bg-[#203f9a] cursor-pointer text-white rounded-md hover:bg-[#183077]"
                     >
                         Change Password
                     </button>
 
                     <p className="text-center mt-4 text-sm">
                         Forgot your password?{' '}
-                        <span onClick={() => setFormStage(2)} className="text-blue-500 cursor-pointer">Reset it here</span>
+                        <span onClick={() => setFormStage(2)} className="text-[#203f9a] cursor-pointer font-semibold">Reset it here</span>
                     </p>
                 </div>
             )}
@@ -110,14 +110,14 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleSendOtp}
-                        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                        className="w-full py-2 cursor-pointer bg-[#203f9a] text-white rounded-md hover:bg-[#183077]"
                     >
                         Send OTP
                     </button>
 
                     <p className="text-center mt-4 text-sm">
                         Remember your password?{' '}
-                        <span onClick={() => setFormStage(1)} className="text-blue-500 cursor-pointer">Go back to change password</span>
+                        <span onClick={() => setFormStage(1)} className="text-[#203f9a] cursor-pointer font-semibold">Go back to change password</span>
                     </p>
                 </div>
             )}
@@ -136,7 +136,7 @@ const ContractorChangePass = () => {
                                     value={digit}
                                     onChange={(e) => handleOtpChange(e, index)}
                                     maxLength="1"
-                                    className="w-10 h-10 text-center border border-gray-300 rounded-md"
+                                    className="w-full sm:h-14 h-10 text-center border border-gray-300 rounded-md"
                                 />
                             ))}
                         </div>
@@ -144,14 +144,14 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleVerifyOtp}
-                        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                        className="w-full py-2 cursor-pointer bg-[#203f9a] text-white rounded-md hover:bg-[#183077]"
                     >
                         Verify OTP
                     </button>
 
                     <p className="text-center mt-4 text-sm">
                         Didn't receive the OTP?{' '}
-                        <span className="text-blue-500 cursor-pointer">Resend OTP</span>
+                        <span className="text-[#203f9a] cursor-pointer font-semibold">Resend OTP</span>
                     </p>
                 </div>
             )}
@@ -185,7 +185,7 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleChangePassword}
-                        className="w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                        className="w-full cursor-pointer py-2 bg-[#203f9a] text-white rounded-md hover:bg-[#183077]"
                     >
                         Update Password
                     </button>

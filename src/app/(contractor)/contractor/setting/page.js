@@ -2,6 +2,8 @@
 import ContractorChangePass from '@/Components/Contractor/ContractorChangePass';
 import ContractorEmailPhone from '@/Components/Contractor/ContractorEmailPhone';
 import ContractorNotification from '@/Components/Contractor/ContractorNotification';
+import icons from '@/icons/icon';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Page = () => {
@@ -13,7 +15,7 @@ const Page = () => {
 
     return (
         <div className="p-6 bg-gray-50 rounded-lg md:mx-0 mx-4">
-            <h1 className="text-2xl font-semibold mb-4">Settings</h1>
+            <Link href="/" className="text-2xl font-semibold mb-5 flex items-center gap-3">{icons.left} Settings</Link>
 
             {/* Custom Tab Navigation */}
             <div className='grid grid-cols-1 md:grid-cols-6 '>

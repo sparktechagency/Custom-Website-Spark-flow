@@ -1,6 +1,7 @@
 'use client';
 import ContractorChangePass from '@/Components/Contractor/ContractorChangePass';
 import ContractorEmailPhone from '@/Components/Contractor/ContractorEmailPhone';
+import ContractorNotification from '@/Components/Contractor/ContractorNotification';
 import React, { useState } from 'react';
 
 const Page = () => {
@@ -50,11 +51,7 @@ const Page = () => {
                     )}
                     {activeTab === '3' && (
                         <div className="space-y-4 p-5 bg-gray-200 rounded-xl">
-                            <h3 className="text-xl font-semibold">Notification Preferences</h3>
-                            <p>
-                                Manage your notification preferences and alerts.
-                            </p>
-                            {/* Add more content or form elements here */}
+                            <ContractorNotification />
                         </div>
                     )}
                 </div>

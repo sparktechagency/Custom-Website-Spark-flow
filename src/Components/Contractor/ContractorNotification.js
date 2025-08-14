@@ -16,7 +16,7 @@ const ContractorNotification = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto ">
+        <div className="max-w-lg mx-auto my-10">
 
             {/* Email Notification */}
             <div className="flex bg-gray-100  p-6 rounded-lg items-center justify-between mb-4">

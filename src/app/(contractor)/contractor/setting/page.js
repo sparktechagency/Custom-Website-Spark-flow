@@ -19,22 +19,22 @@ const Page = () => {
 
             {/* Custom Tab Navigation */}
             <div className='grid grid-cols-1 md:grid-cols-6 '>
-                <div className="flex md:col-span-1 flex-col border-b border-gray-300 mb-4">
+                <div className="flex md:col-span-1 flex-col border-gray-300 mb-4">
                     <button
                         onClick={() => handleTabClick('1')}
-                        className={`py-2 border-b-2 font-semibold cursor-pointer px-4 text-sm   ${activeTab === '1' ? ' border-[#203f9a] text-[#203f9a] bg-gray-200' : 'text-gray-600 hover:text-[#203f9a] border-gray-300'}`}
+                        className={`py-3 text-base border-b-2 font-semibold cursor-pointer px-4 t   ${activeTab === '1' ? ' border-[#203f9a] text-[#203f9a] bg-gray-200' : 'text-gray-600 hover:text-[#203f9a] border-gray-300'}`}
                     >
                         Change Password
                     </button>
                     <button
                         onClick={() => handleTabClick('2')}
-                        className={`py-2 border-b-2 font-semibold cursor-pointer px-4 text-sm   ${activeTab === '2' ? ' border-[#203f9a] text-[#203f9a] bg-gray-200' : 'text-gray-600 hover:text-[#203f9a] border-gray-300'}`}
+                        className={`py-3 text-base border-b-2 font-semibold cursor-pointer px-4    ${activeTab === '2' ? ' border-[#203f9a] text-[#203f9a] bg-gray-200' : 'text-gray-600 hover:text-[#203f9a] border-gray-300'}`}
                     >
                         Update Email / Phone
                     </button>
                     <button
                         onClick={() => handleTabClick('3')}
-                        className={`py-2 border-b-2 font-semibold cursor-pointer px-4 text-sm   ${activeTab === '3' ? ' border-[#203f9a] text-[#203f9a] bg-gray-200' : 'text-gray-600 hover:text-[#203f9a] border-gray-300'}`}
+                        className={`py-3 text-base border-b-2 font-semibold cursor-pointer px-4  ${activeTab === '3' ? ' border-[#203f9a] text-[#203f9a] bg-gray-200' : 'text-gray-600 hover:text-[#203f9a] border-gray-300'}`}
                     >
                         Notification Preferences
                     </button>

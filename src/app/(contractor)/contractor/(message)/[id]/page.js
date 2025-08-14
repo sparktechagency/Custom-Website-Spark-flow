@@ -30,6 +30,7 @@ const MessageInput = () => {
     return (
         <div className="w-full border-2 border-gray-100 rounded-lg flex flex-col justify-between p-2">
 
+            {/* all message show */}
             <div className='flex  flex-col gap-5 max-h-[75vh] overflow-x-auto'>
                 {/* Sample messages (can be dynamic in real use) */}
                 <div className='flex items-start space-x-2'>
@@ -116,7 +117,6 @@ const MessageInput = () => {
                 <div className="flex items-center border-2 border-gray-300 rounded-lg py-1 pl-3 pr-2 mt-4">
                     {/* Attachment Icon */}
 
-
                     {image ? (
                         <div className="relative">
                             <img src={image} alt="Uploaded Preview" className="w-12 border border-gray-300 object-cover rounded-md" />
@@ -156,7 +156,6 @@ const MessageInput = () => {
                 </div>
 
             </div>
-            {/* Image Preview (optional) */}
 
         </div>
     );

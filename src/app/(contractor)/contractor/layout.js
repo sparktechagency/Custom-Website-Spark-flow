@@ -1,18 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./../../globals.css";
-import Header from "@/Components/Common/Header";
-import Footer from "@/Components/Common/Footer";
 import ContractorHeader from "@/Components/Contractor/ContractorHeader";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans", 
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 export const metadata = {
     title: "Contractor Dashboard",

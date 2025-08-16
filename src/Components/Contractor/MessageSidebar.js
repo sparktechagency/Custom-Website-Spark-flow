@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const MessageSidebar = () => {
-    // Sample data for the 
+    // Sample data for the sidebar
     const users = [
         { name: "Motin Mia", role: "Ceo of ToTo Company", image: "https://randomuser.me/api/portraits/men/41.jpg" },
         { name: "Motin Mia", role: "Ceo of ToTo Company", image: "https://randomuser.me/api/portraits/men/42.jpg" },

@@ -20,7 +20,6 @@ const MessageSidebar = () => {
             <div>
                 {/* search  */}
 
-                
                 <input
                     onChange={(e) => console.log(e.target.value)}
                     type="text"

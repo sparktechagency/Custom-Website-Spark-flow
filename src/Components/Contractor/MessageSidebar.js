@@ -19,6 +19,8 @@ const MessageSidebar = () => {
             <h2 className="text-xl font-semibold my-4">Messages</h2>
             <div>
                 {/* search  */}
+
+                
                 <input
                     onChange={(e) => console.log(e.target.value)}
                     type="text"

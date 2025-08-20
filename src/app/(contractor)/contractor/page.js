@@ -1,5 +1,5 @@
 'use client';
-import AllJobs from '@/Components/Contractor/AllJobs';
+import AllJobs from '@/Components/Contractor/SubAllJobs';
 import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
 import JobRequest from '@/Components/Contractor/ContractorJobRequest ';
 import ContractorReciews from '@/Components/Contractor/ContractorReciews';

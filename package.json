@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 3333",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start --port 3000",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "antd": "^5.24.6",
@@ -20,6 +19,7 @@
     "swiper": "^11.2.10"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.12.0",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
   }

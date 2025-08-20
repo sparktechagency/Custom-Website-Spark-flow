@@ -1,5 +1,4 @@
 'use client';
-import MessageSidebar from "@/Components/Contractor/MessageSidebar";
 import SubMessageSidebar from "@/Components/SubContractor/SubMessageSidebar";
 import icons from "@/icons/icon";
 import { useState } from "react";
@@ -12,6 +11,7 @@ export default function Layout({ children }) {
     const handleShowMessage = () => {
         setShowMessage(!showMessage);
     }
+
 
 
     return (
@@ -32,7 +32,7 @@ export default function Layout({ children }) {
             {
                 showMessage &&
                 <div className="md:hidden z-[999] block absolute top-3 right-0 w-full mx-2 col-span-12">
-                    <MessageSidebar />
+                    <SubMessageSidebar />
                 </div>
             }
             <div className="flex flex-1 col-span-9">

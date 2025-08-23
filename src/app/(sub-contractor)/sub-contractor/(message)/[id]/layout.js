@@ -23,7 +23,7 @@ export default function Layout({ children }) {
                 // message icon on mobile
                 <div className="md:hidden absolute -top-5 right-5 block col-span-3">
                     <div className="flex justify-center items-center">
-                        <span onClick={handleShowMessage} className='text-[#203f9a]'>
+                        <span onClick={handleShowMessage} className='text-[#ded317]'>
                             {icons.message}
                         </span>
                     </div>

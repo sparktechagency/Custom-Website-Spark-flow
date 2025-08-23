@@ -19,13 +19,13 @@ const Page = () => {
                 <div className="flex min-w-48 flex-col items-start border-gray-300 mb-4">
                     <button
                         onClick={() => handleTabClick('1')}
-                        className={`py-2 w-full px-4 border-b-2 border-gray-200 cursor-pointer text-lg font-medium ${activeTab === '1' ? 'border-b-[#203f9a] bg-[#4065d33f] text-[#203f9a]' : 'text-gray-600 hover:text-[#203f9a]'}`}
+                        className={`py-2 w-full px-4 border-b-2 border-gray-200 cursor-pointer text-lg font-medium ${activeTab === '1' ? 'border-b-[#ded317] bg-[#ded41759] text-[#ded317]' : 'text-gray-600 hover:text-[#ded317]'}`}
                     >
                         Terms of Service
                     </button>
                     <button
                         onClick={() => handleTabClick('2')}
-                        className={`py-2 px-4 w-full text-lg border-b-2 border-gray-200 cursor-pointer font-medium ${activeTab === '2' ? 'border-b-[#203f9a] bg-[#4065d33f] text-[#203f9a]' : 'text-gray-600 hover:text-[#203f9a]'}`}
+                        className={`py-2 px-4 w-full text-lg border-b-2 border-gray-200 cursor-pointer font-medium ${activeTab === '2' ? 'border-b-[#ded317] bg-[#ded41759] text-[#ded317]' : 'text-gray-600 hover:text-[#ded317]'}`}
                     >
                         Privacy Policy
                     </button>

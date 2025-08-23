@@ -50,12 +50,12 @@ const Page = () => {
     };
 
     return (
-        <div className="p-6 bg-gray-50 rounded-lg md:mx-0 mx-4">
+        <div className="p-6 bg-[#ded41731] rounded-lg md:mx-0 mx-4">
             <div className="flex justify-between items-center mb-6">
                 <Link href="/" className="text-2xl font-semibold flex items-center gap-2">{icons.left} Your Information</Link>
                 <button
                     onClick={handleEditClick}
-                    className={` cursor-pointer text-gray-600 px-8 py-2 rounded-md ${!isEditing ? 'bg-[#203f9a] text-white' : ' bg-green-700 text-white'}`}
+                    className={` cursor-pointer text-gray-600 px-8 py-2 rounded-md ${!isEditing ? 'bg-[#ded317] text-white' : ' bg-green-700 text-white'}`}
                 >
                     {isEditing ? "Save" : "Edit"}
                 </button>

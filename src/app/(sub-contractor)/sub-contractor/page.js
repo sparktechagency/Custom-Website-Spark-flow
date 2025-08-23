@@ -23,43 +23,43 @@ const Page = () => {
     return (
         <section className="">
             {/* Tab Navigation */}
-            <div className="flex space-x-4 flex-wrap mb-4 border-b-2 border-gray-200">
+            <div className="flex space-x-4 flex-wrap mb-4 border-b-2 border-[#ded41754]">
                 <button
                     onClick={() => handleTabChange('dashboard')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'dashboard' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'dashboard' ? 'bg-linear-to-b from-white to-[#ded41741] border-b-2 border-[#ded317] text-[#ded317]' : ''}`}
                 >
                     {icons.dashboard} Dashboard
                 </button>
 
                 <button
                     onClick={() => handleTabChange('jobRequest')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'jobRequest' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'jobRequest' ? 'bg-linear-to-b from-white to-[#ded41741] border-b-2 border-[#ded317] text-[#ded317]' : ''}`}
                 >
                     {icons.job} Your Jobs
                 </button>
 
                 <button
                     onClick={() => handleTabChange('allJobs')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'allJobs' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'allJobs' ? 'bg-linear-to-b from-white to-[#ded41741] border-b-2 border-[#ded317] text-[#ded317]' : ''}`}
                 >
                     {icons.findJobs} Find Jobs
                 </button>
 
                 {/* <button
                     onClick={() => handleTabChange('subcontractors')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'subcontractors' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'subcontractors' ? 'bg-linear-to-b from-white to-[#ded41741] border-b-2 border-[#ded317] text-[#ded317]' : ''}`}
                 >
                     {icons.subcontroctor} Subcontractors
                 </button> */}
                 <button
                     onClick={() => handleTabChange('reviews')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'reviews' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'reviews' ? 'bg-linear-to-b from-white to-[#ded41741] border-b-2 border-[#ded317] text-[#ded317]' : ''}`}
                 >
                     {icons.reviews} Reviews
                 </button>
                 <button
                     onClick={() => handleTabChange('subscription')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'subscription' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'subscription' ? 'bg-linear-to-b from-white to-[#ded41741] border-b-2 border-[#ded317] text-[#ded317]' : ''}`}
                 >
                     {icons.subscription} Subscription
                 </button>

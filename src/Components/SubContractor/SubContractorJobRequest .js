@@ -58,7 +58,7 @@ const SubContractorJobRequest  = () => {
         <td className='py-3 px-5 flex items-center justify-center gap-2'>
           <button className="bg-green-500 text-white px-3 py-1 rounded-md">Accept</button>
           <button className="bg-red-600 text-white px-3 py-1 rounded-md">Cancel</button>
-          <button className="bg-[#203f9a] text-white px-3 py-1 rounded-md">Message</button>
+          <button className="bg-[#ded317] text-white px-3 py-1 rounded-md">Message</button>
         </td>
       </tr>
     ));
@@ -67,25 +67,25 @@ const SubContractorJobRequest  = () => {
   return (
     <div className="container mx-auto p-4">
       {/* Tabs */}
-      <div className="mb-4 flex justify-between items-center">
+      {/* <div className="mb-4 flex justify-between items-center">
         <div className="tabs flex flex-wrap gap-2 space-x-4">
           {['All', 'Roofers', 'Glaziers', 'Painters', 'Plumber'].map((tab) => (
             <button
               key={tab}
-              className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#203f9a] text-white' : 'bg-gray-200 text-black'} px-4 py-2 rounded-md`}
+              className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#ded317] text-white' : 'bg-[#ded41741] text-black'} px-4 py-2 rounded-md`}
               onClick={() => handleTabChange(tab)}
             >
               {tab}
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Job Request Table */}
       <div className="overflow-x-auto shadow-md rounded-lg">
         <table className="min-w-full table-auto">
           <thead>
-            <tr className="bg-gray-100 text-[#203f9a]">
+            <tr className="bg-[#ded41741] text-[#ded317]">
               <th className="px-4 py-5">S/N</th>
               <th className="px-4 py-5">Contractor</th>
               <th className="px-4 py-5">Email</th>

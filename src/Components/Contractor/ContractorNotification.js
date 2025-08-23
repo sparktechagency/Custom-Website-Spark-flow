@@ -23,12 +23,12 @@ const ContractorNotification = () => {
                 <span>Email Notification</span>
                 <button
                     onClick={handleEmailToggle}
-                    className={`${emailNotification ? 'bg-blue-500' : 'bg-gray-300'
-                        } relative inline-flex items-center h-6 rounded-full w-12 transition-colors`}
+                    className={`${emailNotification ? 'bg-[#ded317]' : 'bg-gray-300'
+                        } relative inline-flex items-center cursor-pointer h-6 rounded-full w-12 transition-colors`}
                 >
                     <span
                         className={`${emailNotification ? 'translate-x-6' : 'translate-x-1'
-                            } inline-block w-5 h-5 bg-white rounded-full cursor-pointer transform transition-transform`}
+                            } inline-block w-5 h-5 bg-white rounded-full  transform transition-transform`}
                     ></span>
                 </button>
             </div>
@@ -38,12 +38,12 @@ const ContractorNotification = () => {
                 <span>Push Notification</span>
                 <button
                     onClick={handlePushToggle}
-                    className={`${pushNotification ? 'bg-blue-500' : 'bg-gray-300'
-                        } relative inline-flex items-center h-6 rounded-full w-12 transition-colors`}
+                    className={`${pushNotification ? 'bg-[#ded317]' : 'bg-gray-300'
+                        } relative inline-flex items-center cursor-pointer h-6 rounded-full w-12 transition-colors`}
                 >
                     <span
                         className={`${pushNotification ? 'translate-x-6' : 'translate-x-1'
-                            } inline-block w-5 h-5 bg-white rounded-full cursor-pointer transform transition-transform`}
+                            } inline-block w-5 h-5 bg-white rounded-full  transform transition-transform`}
                     ></span>
                 </button>
             </div>

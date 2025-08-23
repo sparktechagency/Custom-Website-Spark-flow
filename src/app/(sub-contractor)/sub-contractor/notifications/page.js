@@ -45,7 +45,7 @@ const Page = () => {
         <h1 className="text-2xl font-semibold">Notifications</h1>
         <button
           onClick={handleMarkAllAsRead}
-          className="text-sm text-[#203f9a] cursor-pointer font-medium"
+          className="text-sm text-[#ded317] cursor-pointer font-medium"
         >
           Mark All as Read
         </button>
@@ -56,7 +56,7 @@ const Page = () => {
         {currentNotifications.map((notification) => (
           <div
             key={notification.id}
-            className={`flex items-start space-x-4 p-3 cursor-pointer rounded-lg ${!notification.read ? 'bg-[#203f9a1e]' : 'bg-white'}  border-2 border-[#203f9a1e]`}
+            className={`flex items-start space-x-4 p-3 cursor-pointer rounded-lg ${!notification.read ? 'bg-[#ded3171e]' : 'bg-white'}  border-2 border-[#ded3171e]`}
           >
             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-300">
               {/* Notification Icon */}
@@ -90,7 +90,7 @@ const Page = () => {
             <button
               key={index}
               onClick={() => handlePageChange(index + 1)}
-              className={`px-4 py-2 rounded-md ${currentPage === index + 1 ? 'bg-[#203f9a] text-white' : 'bg-white text-[#203f9a]'}`}
+              className={`px-4 py-2 rounded-md ${currentPage === index + 1 ? 'bg-[#ded317] text-white' : 'bg-white text-[#ded317]'}`}
             >
               {index + 1}
             </button>

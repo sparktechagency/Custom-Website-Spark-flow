@@ -15,7 +15,7 @@ const SubMessageSidebar = () => {
        ];
 
     return (
-        <div className="w-full h-[85vh] overflow-y-auto bg-[#F3F5FA] rounded-lg border-gray-100 border-2 p-4">
+        <div className="w-full h-[85vh] overflow-y-auto bg-[#ded41727] rounded-lg border-[#ded317] border-2 p-4">
             <h2 className="text-xl font-semibold my-4">Messages</h2>
             <div>
                 {/* search  */}
@@ -24,7 +24,7 @@ const SubMessageSidebar = () => {
                     onChange={(e) => console.log(e.target.value)}
                     type="text"
                     placeholder="Search..."
-                    className="w-full p-2 border ring-0 focus:outline-[#203f9a] border-gray-300 rounded-md"
+                    className="w-full p-2 border ring-0 focus:outline-[#ded4176c] border-[#ded317] rounded-md"
                 />
             </div>
 
@@ -33,7 +33,7 @@ const SubMessageSidebar = () => {
                     <Link
                         href={`/sub-contractor/${index}`}
                         key={index}
-                        className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-50 cursor-pointer"
+                        className="flex items-center space-x-4 p-3 rounded-lg hover:bg-[#ded4176c] cursor-pointer"
                     >
                         <img
                             src={user.image}

@@ -80,14 +80,14 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleChangePassword}
-                        className="w-full py-2 bg-[#203f9a] cursor-pointer text-white rounded-md hover:bg-[#183077]"
+                        className="w-full py-2 bg-[#ded317] cursor-pointer text-white rounded-md hover:bg-[#183077]"
                     >
                         Change Password
                     </button>
 
                     <p className="text-center mt-4 text-sm">
                         Forgot your password?{' '}
-                        <span onClick={() => setFormStage(2)} className="text-[#203f9a] cursor-pointer font-semibold">Reset it here</span>
+                        <span onClick={() => setFormStage(2)} className="text-[#ded317] cursor-pointer font-semibold">Reset it here</span>
                     </p>
                 </div>
             )}
@@ -109,14 +109,14 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleSendOtp}
-                        className="w-full py-2 cursor-pointer bg-[#203f9a] text-white rounded-md hover:bg-[#183077]"
+                        className="w-full py-2 cursor-pointer bg-[#ded317] text-white rounded-md hover:bg-[#183077]"
                     >
                         Send OTP
                     </button>
 
                     <p className="text-center mt-4 text-sm">
                         Remember your password?{' '}
-                        <span onClick={() => setFormStage(1)} className="text-[#203f9a] cursor-pointer font-semibold">Go back to change password</span>
+                        <span onClick={() => setFormStage(1)} className="text-[#ded317] cursor-pointer font-semibold">Go back to change password</span>
                     </p>
                 </div>
             )}
@@ -143,14 +143,14 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleVerifyOtp}
-                        className="w-full py-2 cursor-pointer bg-[#203f9a] text-white rounded-md hover:bg-[#183077]"
+                        className="w-full py-2 cursor-pointer bg-[#ded317] text-white rounded-md hover:bg-[#183077]"
                     >
                         Verify OTP
                     </button>
 
                     <p className="text-center mt-4 text-sm">
                         Didn't receive the OTP?{' '}
-                        <span className="text-[#203f9a] cursor-pointer font-semibold">Resend OTP</span>
+                        <span className="text-[#ded317] cursor-pointer font-semibold">Resend OTP</span>
                     </p>
                 </div>
             )}
@@ -184,7 +184,7 @@ const ContractorChangePass = () => {
 
                     <button
                         onClick={handleChangePassword}
-                        className="w-full cursor-pointer py-2 bg-[#203f9a] text-white rounded-md hover:bg-[#183077]"
+                        className="w-full cursor-pointer py-2 bg-[#ded317] text-white rounded-md hover:bg-[#183077]"
                     >
                         Update Password
                     </button>

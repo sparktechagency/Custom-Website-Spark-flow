@@ -31,7 +31,7 @@ const MessageInput = () => {
         <div className='w-full min-h-[50vh] flex items-center justify-center'>
             {
                 id == "message" ? <div className='text-center'>
-                    <h2 className='text-4xl font-semibold text-[#203f9a] mb-2'>Welcome To Message</h2>
+                    <h2 className='text-4xl font-semibold text-[#ded317] mb-2'>Welcome To Message</h2>
                     <p>Thank you for coming. Start Your new message.</p>
                 </div>
                     :
@@ -155,7 +155,7 @@ const MessageInput = () => {
                                 {/* Send Button */}
                                 <button
                                     onClick={handleSendMessage}
-                                    className="bg-[#203f9a] cursor-pointer text-white p-3 rounded-lg flex items-center justify-center"
+                                    className="bg-[#ded317] cursor-pointer text-white p-3 rounded-lg flex items-center justify-center"
                                 >
                                     <FiSend className='text-2xl' />
                                 </button>

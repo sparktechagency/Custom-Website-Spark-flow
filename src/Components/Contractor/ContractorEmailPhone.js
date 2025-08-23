@@ -45,7 +45,7 @@ const ContractorEmailPhone = () => {
 
             <button
                 onClick={handleSubmit}
-                className="w-full py-2 bg-[#203f9a] text-white rounded-md cursor-pointer hover:bg-[#183077]"
+                className="w-full py-2 bg-[#ded317] text-white rounded-md cursor-pointer hover:bg-[#183077]"
             >
                 Update Information
             </button>

@@ -7,7 +7,7 @@ const HowItWork = () => {
                 <img className='xl:w-2/3 w-full' src="/Images/Home/howitwork.png" alt="" />
             </div>
             <div>
-                <h3 className='text-6xl font-bold mb-5 text-gray-900'>How It Works</h3> 
+                <h3 className='text-6xl font-bold mb-5 text-gray-900'>How It  Works</h3> 
                 <div className='my-8'>
                     <h3 className='text-2xl font-semibold mb-3 text-gray-900'>Step 1: Create Your Profile</h3>
                     <p className='text-lg text-gray-700'>Getting started is quick and easy. Sign up and create your profile in just a few minutes. Whether you're a contractor looking to post jobs or a subcontractor seeking opportunities, your profile helps match you with the right opportunities..</p>

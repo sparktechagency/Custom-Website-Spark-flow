@@ -11,7 +11,7 @@ const Hero = () => {
     };
 
     return (
-        <div className='relative container  overflow-hidden'>
+        <section id='hero' className='relative container  overflow-hidden'>
             <section className=' lx:px-0 px-5 grid xl:grid-cols-2 items-center xl:gap-4'>
                 <div className="relative bg-cover bg-center min-h-[60vh]  bg-no-repeat">
                     <img className='w-full' src="/Images/Home/hero-banner.png" alt="" />
@@ -36,7 +36,7 @@ const Hero = () => {
             <div className=''>
                 <AuthCards action={isOpen} toggleModal={toggleModal} />
             </div>
-        </div>
+        </section>
     );
 }
 

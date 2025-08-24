@@ -28,11 +28,11 @@ const Header = () => {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center lg:pt-0 pt-2  gap-3 md:gap-4 lg:gap-6 xl:gap-8 text-black font-medium text-xs md:text-sm lg:text-base">
-                    <Link href="/" className="hover:text-blue-600 transition-colors whitespace-nowrap">Home</Link>
-                    <Link href="/About" className="hover:text-blue-600 transition-colors whitespace-nowrap">About</Link>
-                    <Link href="/how-it-works" className="hover:text-blue-600 transition-colors whitespace-nowrap">How it works</Link>
-                    <Link href="/features" className="hover:text-blue-600 transition-colors whitespace-nowrap">Features</Link>
-                    <Link href="/contact" className="hover:text-blue-600 transition-colors whitespace-nowrap">Contact</Link>
+                    <Link href="#hero" className="hover:text-blue-600 transition-colors whitespace-nowrap">Home</Link>
+                    <Link href="#about-us" className="hover:text-blue-600 transition-colors whitespace-nowrap">About</Link>
+                    <Link href="#how-it-works" className="hover:text-blue-600 transition-colors whitespace-nowrap">How it works</Link>
+                    <Link href="#key-features" className="hover:text-blue-600 transition-colors whitespace-nowrap">Features</Link>
+                    <Link href="#testimonials" className="hover:text-blue-600 transition-colors whitespace-nowrap">Contact</Link>
                 </nav>
 
                 {/* Login Button (Desktop) */}

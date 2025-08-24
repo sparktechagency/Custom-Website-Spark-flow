@@ -2,7 +2,7 @@ import React from 'react';
 
 const HowItWork = () => {
     return (
-        <div className='container xl:px-0 px-5 py-8 md:py-12 grid xl:grid-cols-2 items-center gap-5'>
+        <section id='how-it-works' className='container xl:px-0 px-5 py-8 md:py-12 grid xl:grid-cols-2 items-center gap-5'>
             <div className=''>
                 <img className='xl:w-2/3 w-full' src="/Images/Home/howitwork.png" alt="" />
             </div>
@@ -22,7 +22,7 @@ const HowItWork = () => {
                 </div>
             </div>
 
-        </div>
+        </section>
     );
 }
 

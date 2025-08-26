@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const Subcontractors = () => {
+const ContarctorSubcontractors = () => {
     // State to manage active tab and data
     const [activeTab, setActiveTab] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
@@ -57,7 +57,7 @@ const Subcontractors = () => {
                 <td className='py-3 px-5'>{job.service}</td>
                 <td className='py-3 px-5'>{job.date}</td>
                 <td className='py-3 px-5 flex items-center justify-center gap-2'>
-                    <button className="bg-[#ded317] text-white px-3 py-1 rounded-md">Message</button>
+                    <button className="bg-[#203f9a] text-white px-3 py-1 rounded-md">Message</button>
                     <button className="bg-gray-500 text-white px-3 py-1 rounded-md">Info</button>
                 </td>
             </tr>
@@ -72,7 +72,7 @@ const Subcontractors = () => {
                     {['All', 'Roofers', 'Glaziers', 'Painters', 'Plumber'].map((tab) => (
                         <button
                             key={tab}
-                            className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#ded317] text-white' : 'bg-gray-200 text-black'} px-4 py-2 rounded-md`}
+                            className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#203f9a] text-white' : 'bg-gray-200 text-black'} px-4 py-2 rounded-md`}
                             onClick={() => handleTabChange(tab)}
                         >
                             {tab}
@@ -85,7 +85,7 @@ const Subcontractors = () => {
             <div className="overflow-x-auto shadow-md rounded-lg">
                 <table className="min-w-full table-auto">
                     <thead>
-                        <tr className="bg-gray-100 text-[#ded317]">
+                        <tr className="bg-gray-100 text-[#203f9a]">
                             <th className="px-4 py-5">S/N</th>
                             <th className="px-4 py-5">Sub Contractor</th>
                             <th className="px-4 py-5">Email</th>
@@ -114,4 +114,4 @@ const Subcontractors = () => {
     );
 };
 
-export default Subcontractors;
+export default ContarctorSubcontractors;

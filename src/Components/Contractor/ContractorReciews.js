@@ -66,7 +66,7 @@ const ContractorReciews = () => {
                     }
                 </td>
                 <td className='py-3 px-5 gap-2'>
-                    <button className="bg-[#ded317] cursor-pointer text-white px-3 py-1 rounded-md">See Feedback</button>
+                    <button className="bg-[#203f9a] cursor-pointer text-white px-3 py-1 rounded-md">See Feedback</button>
                 </td>
             </tr>
         ));
@@ -79,7 +79,7 @@ const ContractorReciews = () => {
             <div className="overflow-x-auto shadow-md rounded-lg">
                 <table className="min-w-full table-auto">
                     <thead>
-                        <tr className="bg-gray-100 text-[#ded317]">
+                        <tr className="bg-gray-100 text-[#203f9a]">
                             <th className="px-4 py-5">S/N</th>
                             <th className="px-4 py-5">Name</th>
                             <th className="px-4 py-5">Email</th>

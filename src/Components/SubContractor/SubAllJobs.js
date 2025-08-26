@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import icons from '@/icons/icon'; // assuming your icon import works correctly
 
-const AllJobs = () => {
+const SubAllJobs = () => {
     const [activeTab, setActiveTab] = useState('All');
     const [isModalOpen, setIsModalOpen] = useState(false); // state to toggle the modal
     const [newJob, setNewJob] = useState({
@@ -85,7 +85,7 @@ const AllJobs = () => {
                     {['All', 'Roofers', 'Glaziers', 'Painters', 'Plumber'].map((tab) => (
                         <button
                             key={tab}
-                            className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#203f9a] text-white' : 'bg-gray-200 text-black'} px-4 py-2 rounded-md`}
+                            className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#ded317] text-white' : 'bg-[#ded41741] text-black'} px-4 py-2 rounded-md`}
                             onClick={() => setActiveTab(tab)}
                         >
                             {tab}
@@ -94,7 +94,7 @@ const AllJobs = () => {
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)} // Open modal when "Add Job" is clicked
-                    className="flex items-center gap-3 cursor-pointer border-2 border-[#203f9a] text-[#203f9a] font-semibold px-4 py-2 rounded-md"
+                    className="flex items-center gap-3 cursor-pointer border-2 border-[#ded317] text-[#ded317] font-semibold px-4 py-2 rounded-md"
                 >
                     {icons.add} Add New
                 </button>
@@ -112,7 +112,7 @@ const AllJobs = () => {
                         <div className="flex space-x-2 mt-4">
                             <button className="bg-red-600 cursor-pointer text-white px-4 py-2 rounded-md">Delete</button>
                             <button className="bg-gray-200 cursor-pointer  text-black px-4 py-2 rounded-md">Edit</button>
-                            <button className="bg-[#203f9a] cursor-pointer text-white  px-4 py-2 rounded-md">See Details</button>
+                            <button className="bg-[#ded317] cursor-pointer text-white  px-4 py-2 rounded-md">See Details</button>
                         </div>
                     </div>
                 ))}
@@ -198,7 +198,7 @@ const AllJobs = () => {
                             </button>
                             <button
                                 onClick={handleSubmit} // Submit the new job
-                                className="bg-[#203f9a] cursor-pointer text-white px-4 py-2 rounded-md"
+                                className="bg-[#ded317] cursor-pointer text-white px-4 py-2 rounded-md"
                             >
                                 Add Job
                             </button>
@@ -210,4 +210,4 @@ const AllJobs = () => {
     );
 };
 
-export default AllJobs;
+export default SubAllJobs;

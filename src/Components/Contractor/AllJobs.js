@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import icons from '@/icons/icon'; // assuming your icon import works correctly
 
-const SubAllJobs = () => {
+const AllJobs = () => {
     const [activeTab, setActiveTab] = useState('All');
     const [isModalOpen, setIsModalOpen] = useState(false); // state to toggle the modal
     const [newJob, setNewJob] = useState({
@@ -85,7 +85,7 @@ const SubAllJobs = () => {
                     {['All', 'Roofers', 'Glaziers', 'Painters', 'Plumber'].map((tab) => (
                         <button
                             key={tab}
-                            className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#ded317] text-white' : 'bg-[#ded41741] text-black'} px-4 py-2 rounded-md`}
+                            className={`tab-btn cursor-pointer ${activeTab === tab ? 'bg-[#203f9a] text-white' : 'bg-[#203f9a4b] text-black'} px-4 py-2 rounded-md`}
                             onClick={() => setActiveTab(tab)}
                         >
                             {tab}
@@ -94,7 +94,7 @@ const SubAllJobs = () => {
                 </div>
                 {/* <button
                     onClick={() => setIsModalOpen(true)} // Open modal when "Add Job" is clicked
-                    className="flex items-center gap-3 cursor-pointer border-2 border-[#ded317] text-[#ded317] font-semibold px-4 py-2 rounded-md"
+                    className="flex items-center gap-3 cursor-pointer border-2 border-[#203f9a] text-[#203f9a] font-semibold px-4 py-2 rounded-md"
                 >
                     {icons.add} Add New
                 </button> */}
@@ -110,8 +110,8 @@ const SubAllJobs = () => {
                         <p className=" text-sm">{job.salary}</p>
                         <p className=" text-sm">{job.vacancies}</p>
                         <div className="grid grid-cols-2 space-x-2 mt-4">
-                            <button className="border border-[#ded317] cursor-pointer text-[#ded317]  px-4 py-2 rounded-md">See Details</button>
-                            <button className="bg-[#ded317] cursor-pointer text-white  px-4 py-2 rounded-md">Apply Now</button>
+                            <button className="border border-[#203f9a] cursor-pointer text-[#203f9a]  px-4 py-2 rounded-md">See Details</button>
+                            <button className="bg-[#203f9a] cursor-pointer text-white  px-4 py-2 rounded-md">Apply Now</button>
                         </div>
                     </div>
                 ))}
@@ -197,7 +197,7 @@ const SubAllJobs = () => {
                             </button>
                             <button
                                 onClick={handleSubmit} // Submit the new job
-                                className="bg-[#ded317] cursor-pointer text-white px-4 py-2 rounded-md"
+                                className="bg-[#203f9a] cursor-pointer text-white px-4 py-2 rounded-md"
                             >
                                 Add Job
                             </button>
@@ -209,4 +209,4 @@ const SubAllJobs = () => {
     );
 };
 
-export default SubAllJobs;
+export default AllJobs;

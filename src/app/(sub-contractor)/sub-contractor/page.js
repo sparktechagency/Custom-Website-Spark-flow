@@ -1,15 +1,12 @@
 'use client';
-import AllJobs from '@/Components/Contractor/SubAllJobs';
-import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
-import JobRequest from '@/Components/Contractor/ContractorJobRequest ';
-import ContractorReciews from '@/Components/Contractor/ContractorReciews';
 import Subcontractors from '@/Components/Contractor/ContractorSubcontractors';
-import ContractorSubscription from '@/Components/Contractor/ContractorSubscription';
 import SubContractorDashboard from '@/Components/SubContractor/SubContractorDashboard';
 import icons from '@/icons/icon';
 import React, { useState } from 'react';
-import SubAllJobs from '@/Components/Contractor/SubAllJobs';
 import SubContractorJobRequest from '@/Components/SubContractor/SubContractorJobRequest ';
+import SubAllJobs from '@/Components/SubContractor/SubAllJobs';
+import SubContractorReciews from '@/Components/SubContractor/SubContractorReciews';
+import SubContractorSubscription from '@/Components/SubContractor/SubContractorSubscription';
 
 const Page = () => {
     // State to track the active tab
@@ -71,8 +68,8 @@ const Page = () => {
                 {activeTab === 'allJobs' && <SubAllJobs />}
                 {activeTab === 'jobRequest' && <SubContractorJobRequest />}
                 {activeTab === 'subcontractors' && <Subcontractors />}
-                {activeTab === 'reviews' && <ContractorReciews />}
-                {activeTab === 'subscription' && <ContractorSubscription />}
+                {activeTab === 'reviews' && <SubContractorReciews />}
+                {activeTab === 'subscription' && <SubContractorSubscription />}
             </div>
         </section>
     );

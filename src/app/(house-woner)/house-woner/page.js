@@ -1,5 +1,5 @@
 'use client';
-import AllJobs from '@/Components/Contractor/SubAllJobs';
+// import AllJobs from '@/Components/Contractor/SubAllJobs';
 import ContractorDashboard from '@/Components/Contractor/ContractorDashboard';
 import JobRequest from '@/Components/Contractor/ContractorJobRequest ';
 import ContractorReciews from '@/Components/Contractor/ContractorReciews';
@@ -8,7 +8,7 @@ import ContractorSubscription from '@/Components/Contractor/ContractorSubscripti
 import SubContractorDashboard from '@/Components/SubContractor/SubContractorDashboard';
 import icons from '@/icons/icon';
 import React, { useState } from 'react';
-import SubAllJobs from '@/Components/Contractor/SubAllJobs';
+// import SubAllJobs from '@/Components/Contractor/SubAllJobs';
 import SubContractorJobRequest from '@/Components/SubContractor/SubContractorJobRequest ';
 
 const Page = () => {
@@ -68,7 +68,7 @@ const Page = () => {
             {/* Content based on Active Tab */}
             <div>
                 {activeTab === 'dashboard' && <SubContractorDashboard />}
-                {activeTab === 'allJobs' && <SubAllJobs />}
+                {/* {activeTab === 'allJobs' && <SubAllJobs />} */}
                 {activeTab === 'jobRequest' && <SubContractorJobRequest />}
                 {activeTab === 'subcontractors' && <Subcontractors />}
                 {activeTab === 'reviews' && <ContractorReciews />}

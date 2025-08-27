@@ -103,16 +103,15 @@ const SubAllJobs = () => {
             {/* Job Listings */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {jobData[activeTab]?.map((job, index) => (
-                    <div key={index} className="job-card border border-gray-200 p-4 rounded-lg shadow">
+                    <div key={index} className="job-card border border-[#ded41741] p-4 rounded-lg shadow">
                         <img src={job.image} alt={job.title} className="w-full min-h-[200px] object-cover rounded-md" />
                         <h2 className=" text-xl mt-4">{job.title}</h2>
                         <p className=" text-sm">{job.location}</p>
                         <p className=" text-sm">{job.salary}</p>
                         <p className=" text-sm">{job.vacancies}</p>
-                        <div className="flex space-x-2 mt-4">
-                            <button className="bg-red-600 cursor-pointer text-white px-4 py-2 rounded-md">Delete</button>
-                            <button className="bg-gray-200 cursor-pointer  text-black px-4 py-2 rounded-md">Edit</button>
-                            <button className="bg-[#ded317] cursor-pointer text-white  px-4 py-2 rounded-md">See Details</button>
+                        <div className="grid grid-cols-2 space-x-2 mt-4">
+                            <button className="border border-[#ded317] cursor-pointer text-[#ded317]  px-4 py-2 rounded-md">See Details</button>
+                            <button className="bg-[#ded317] cursor-pointer text-white  px-4 py-2 rounded-md">Apply Now</button>
                         </div>
                     </div>
                 ))}

@@ -10,6 +10,11 @@ import icons from '@/icons/icon';
 import React, { useState } from 'react';
 // import SubAllJobs from '@/Components/Contractor/SubAllJobs';
 import SubContractorJobRequest from '@/Components/SubContractor/SubContractorJobRequest ';
+import HouseWonerDashboard from '@/Components/HouseWoner/HouseWonerDashboard';
+import HouseWonerFindCOntractors from '@/Components/HouseWoner/HouseWonerFindCOntractors';
+import HouseWonerFindSubContractors from '@/Components/HouseWoner/HouseWonerFindSubContractors';
+import HouseWonerReviews from '@/Components/HouseWoner/HouseWonerReviews';
+import HouseWonerSubscription from '@/Components/HouseWoner/HouseWonerSubscription';
 
 const Page = () => {
     // State to track the active tab
@@ -32,25 +37,19 @@ const Page = () => {
                 </button>
 
                 <button
-                    onClick={() => handleTabChange('jobRequest')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'jobRequest' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    onClick={() => handleTabChange('findContractors')}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'findContractors' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
                 >
-                    {icons.job} Your Jobs
+                    {icons.job} Find Contractors
                 </button>
 
                 <button
-                    onClick={() => handleTabChange('allJobs')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'allJobs' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
+                    onClick={() => handleTabChange('findSubContractors')}
+                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'findSubContractors' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
                 >
-                    {icons.findJobs} Find Jobs
+                    {icons.findJobs}  Find Sub-Contractors
                 </button>
 
-                {/* <button
-                    onClick={() => handleTabChange('subcontractors')}
-                    className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'subcontractors' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
-                >
-                    {icons.subcontroctor} Subcontractors
-                </button> */}
                 <button
                     onClick={() => handleTabChange('reviews')}
                     className={`px-4 flex items-center gap-2 cursor-pointer font-bold py-2  ${activeTab === 'reviews' ? 'bg-linear-to-b from-white to-blue-100 border-b-2 border-[#203f9a] text-[#203f9a]' : ''}`}
@@ -67,12 +66,11 @@ const Page = () => {
 
             {/* Content based on Active Tab */}
             <div>
-                {activeTab === 'dashboard' && <SubContractorDashboard />}
-                {/* {activeTab === 'allJobs' && <SubAllJobs />} */}
-                {activeTab === 'jobRequest' && <SubContractorJobRequest />}
-                {activeTab === 'subcontractors' && <Subcontractors />}
-                {activeTab === 'reviews' && <ContractorReciews />}
-                {activeTab === 'subscription' && <ContractorSubscription />}
+                {activeTab === 'dashboard' && <HouseWonerDashboard />}
+                {activeTab === 'findContractors' && <HouseWonerFindCOntractors />}
+                {activeTab === 'findSubContractors' && <HouseWonerFindSubContractors />}
+                {activeTab === 'reviews' && <HouseWonerReviews />}
+                {activeTab === 'subscription' && <HouseWonerSubscription />}
             </div>
         </section>
     );

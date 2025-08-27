@@ -70,7 +70,7 @@ const SubContractorSubscription = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <button className='px-10 py-3 mt-5 text-white bg-[#ded317] hover:bg-[#203f9a] cursor-pointer duration-300 w-full rounded-lg '>Get Started</button>
+                            <button className='px-10 py-3 mt-5 text-white bg-[#ded317] hover:bg-[#c7bd08] cursor-pointer duration-300 w-full rounded-lg '>Get Started</button>
                         </div>
                     </div>
                 ))}

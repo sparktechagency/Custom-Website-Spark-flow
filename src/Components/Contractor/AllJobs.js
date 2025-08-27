@@ -103,15 +103,16 @@ const AllJobs = () => {
             {/* Job Listings */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {jobData[activeTab]?.map((job, index) => (
-                    <div key={index} className="job-card border border-[#ded41741] p-4 rounded-lg shadow">
+                    <div key={index} className="job-card border border-gray-200 p-4 rounded-lg shadow">
                         <img src={job.image} alt={job.title} className="w-full min-h-[200px] object-cover rounded-md" />
                         <h2 className=" text-xl mt-4">{job.title}</h2>
                         <p className=" text-sm">{job.location}</p>
                         <p className=" text-sm">{job.salary}</p>
                         <p className=" text-sm">{job.vacancies}</p>
-                        <div className="grid grid-cols-2 space-x-2 mt-4">
-                            <button className="border border-[#203f9a] cursor-pointer text-[#203f9a]  px-4 py-2 rounded-md">See Details</button>
-                            <button className="bg-[#203f9a] cursor-pointer text-white  px-4 py-2 rounded-md">Apply Now</button>
+                        <div className="flex space-x-2 justify-center mt-4">
+                            <button className="bg-red-600 w-full cursor-pointer text-white px-4 py-2 rounded-md">Delete</button>
+                            <button className="bg-gray-200 w-full cursor-pointer  text-black px-4 py-2 rounded-md">Edit</button>
+                            <button className="bg-[#203f9a] w-full cursor-pointer text-white  px-4 py-2 rounded-md">See Details</button>
                         </div>
                     </div>
                 ))}
@@ -197,7 +198,7 @@ const AllJobs = () => {
                             </button>
                             <button
                                 onClick={handleSubmit} // Submit the new job
-                                className="bg-[#203f9a] cursor-pointer text-white px-4 py-2 rounded-md"
+                                className="bg-[#ded317] cursor-pointer text-white px-4 py-2 rounded-md"
                             >
                                 Add Job
                             </button>

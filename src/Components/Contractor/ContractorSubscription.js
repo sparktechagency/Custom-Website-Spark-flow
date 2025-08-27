@@ -70,7 +70,7 @@ const ContractorSubscription = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <button className='px-10 py-3 mt-5 text-white bg-[#203f9a] hover:bg-[#ded317] cursor-pointer duration-300 w-full rounded-lg '>Get Started</button>
+                            <button className='px-10 py-3 mt-5 text-white bg-[#203f9a] hover:bg-[#122f86] cursor-pointer duration-300 w-full rounded-lg '>Get Started</button>
                         </div>
                     </div>
                 ))}

@@ -1,4 +1,5 @@
-import SubContractorHeader from "@/Components/SubContractor/SubContractorHeader";
+
+import HouseWonerHeader from "@/Components/HouseWoner/HouseWonerHeader";
 import "./../../globals.css";
 
 export const metadata = {
@@ -11,7 +12,7 @@ export default function Layout({ children }) {
 
     return (
         <div className="container">
-            <SubContractorHeader />
+            <HouseWonerHeader />
             <hr className="border border-[#ececec] my-5 " />
             <div className="z-[9] relative">
                 {children}

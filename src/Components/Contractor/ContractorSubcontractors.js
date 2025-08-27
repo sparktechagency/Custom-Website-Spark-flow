@@ -1,10 +1,12 @@
-
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const ContarctorSubcontractors = () => {
     // State to manage active tab and data
     const [activeTab, setActiveTab] = useState('All');
     const [currentPage, setCurrentPage] = useState(1);
+    const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false); // For details modal
+    const [selectedJob, setSelectedJob] = useState(null); // Store the selected job for details modal
 
     // Example job requests for each tab
     const jobRequests = {
@@ -44,6 +46,18 @@ const ContarctorSubcontractors = () => {
         setCurrentPage(1); // Reset to first page on tab change
     };
 
+    // Open the details modal
+    const showDetails = (job) => {
+        setSelectedJob(job);
+        setIsDetailsModalOpen(true);
+    };
+
+    // Close the details modal
+    const closeDetailsModal = () => {
+        setIsDetailsModalOpen(false);
+        setSelectedJob(null); // Clear selected job
+    };
+
     const renderJobRequests = () => {
         const startIndex = (currentPage - 1) * rowsPerPage;
         const endIndex = startIndex + rowsPerPage;
@@ -57,8 +71,8 @@ const ContarctorSubcontractors = () => {
                 <td className='py-3 px-5'>{job.service}</td>
                 <td className='py-3 px-5'>{job.date}</td>
                 <td className='py-3 px-5 flex items-center justify-center gap-2'>
-                    <button className="bg-[#203f9a] text-white px-3 py-1 rounded-md">Message</button>
-                    <button className="bg-gray-500 text-white px-3 py-1 rounded-md">Info</button>
+                    <button className="cursor-pointer bg-[#203f9a] text-white px-3 py-1 rounded-md">Message</button>
+                    <button onClick={() => showDetails(job)} className="cursor-pointer bg-gray-500 text-white px-3 py-1 rounded-md">Info</button>
                 </td>
             </tr>
         ));
@@ -110,6 +124,29 @@ const ContarctorSubcontractors = () => {
                     <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} className="px-4 py-2 bg-gray-300 rounded-md ml-2 cursor-pointer">Next</button>
                 </div>
             </div>
+
+            {/* Details Modal */}
+            {isDetailsModalOpen && selectedJob && (
+                <div onClick={closeDetailsModal} className="fixed inset-0 bg-[rgba(0,0,0,0.6)] bg-opacity-50 flex justify-center items-center z-50">
+                    <div onClick={(e) => e.stopPropagation()} className="bg-white p-6 rounded-lg shadow w-1/3">
+                        <h2 className="text-xl font-semibold mb-4">Job Details</h2>
+                        <img src={selectedJob.image} alt={selectedJob.subContractor} className="w-full h-40 object-cover rounded-md mb-4" />
+                        <p><strong>Sub Contractor:</strong> {selectedJob.subContractor}</p>
+                        <p><strong>Email:</strong> {selectedJob.email}</p>
+                        <p><strong>Service:</strong> {selectedJob.service}</p>
+                        <p><strong>Date:</strong> {selectedJob.date}</p>
+
+                        <div className="flex justify-end mt-4">
+                            <button
+                                onClick={closeDetailsModal}
+                                className="bg-[#203f9a] cursor-pointer text-white px-4 py-2 rounded-md"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

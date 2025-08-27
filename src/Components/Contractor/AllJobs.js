@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import icons from '@/icons/icon'; // Assuming your icon import works correctly
 import { message } from 'antd';
+import Swal from 'sweetalert2';
 
 const AllJobs = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -73,12 +74,26 @@ const AllJobs = () => {
     // Handle job deletion
     const handleDelete = (jobIndex) => {
 
-        // Update jobData by removing the job at the given index
         const updatedJobs = jobData[activeTab].filter((_, index) => index !== jobIndex);
-        // Update the state
         jobData[activeTab] = updatedJobs;
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
 
-        message.success('Job deleted successfully');
 
     };
 
@@ -164,7 +179,7 @@ const AllJobs = () => {
             {/* Modal for Add/Edit Job */}
             {isModalOpen && (
                 <div onClick={() => setIsModalOpen(false)} className="fixed inset-0 bg-[rgba(0,0,0,0.6)] bg-opacity-50 flex justify-center items-center z-50">
-                    <div onClick={(e) => e.stopPropagation()} className="bg-white p-6 rounded-lg shadow">
+                    <div onClick={(e) => e.stopPropagation()} className="bg-white p-6 lg:w-[500px] rounded-lg shadow">
                         <h2 className="text-xl font-semibold mb-4">{modalMood === 'add' ? 'Add New Job' : 'Edit Job'}</h2>
 
                         {/* Job Title */}
@@ -273,7 +288,7 @@ const AllJobs = () => {
                 <div onClick={closeDetailsModal} className="fixed inset-0 bg-[rgba(0,0,0,0.6)] bg-opacity-50 flex justify-center items-center z-50">
                     <div onClick={(e) => e.stopPropagation()} className="bg-white p-6 rounded-lg shadow w-1/3">
                         <h2 className="text-xl font-semibold mb-4">Job Details</h2>
-                        <img src={selectedJob.image} alt={selectedJob.title} className="w-full h-40 object-cover rounded-md mb-4" />
+                        <img src={selectedJob.image} alt={selectedJob.title} className="w-full min-h-52 max-h-60 object-cover rounded-md mb-4" />
                         <p><strong>Title:</strong> {selectedJob.title}</p>
                         <p><strong>Location:</strong> {selectedJob.location}</p>
                         <p><strong>Amount:</strong> {selectedJob.amount}</p>

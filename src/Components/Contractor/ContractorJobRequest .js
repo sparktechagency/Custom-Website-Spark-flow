@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const JobRequest = () => {
   // State to manage active tab and data
@@ -43,6 +44,49 @@ const JobRequest = () => {
     setCurrentPage(1); // Reset to first page on tab change
   };
 
+  const handleAccept = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#00c951",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Accepted it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Accepted!",
+          text: "Your file has been accepted.",
+          icon: "success"
+        });
+      }
+    });
+  }
+
+  const handleCancel = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, cancel it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Cancelled!",
+          text: "Your file has been cancelled.",
+          icon: "success"
+        });
+      }
+    });
+  }
+  const handleMessage = () => {
+    
+  }
+
   const renderJobRequests = () => {
     const startIndex = (currentPage - 1) * rowsPerPage;
     const endIndex = startIndex + rowsPerPage;
@@ -56,9 +100,9 @@ const JobRequest = () => {
         <td className='py-3 px-5'>{job.service}</td>
         <td className='py-3 px-5'>{job.date}</td>
         <td className='py-3 px-5 flex items-center justify-center gap-2'>
-          <button className="bg-green-500 text-white px-3 py-1 rounded-md">Accept</button>
-          <button className="bg-red-600 text-white px-3 py-1 rounded-md">Cancel</button>
-          <button className="bg-[#203f9a] text-white px-3 py-1 rounded-md">Message</button>
+          <button onClick={handleAccept} className="bg-green-500 cursor-pointer text-white px-3 py-1 rounded-md">Accept</button>
+          <button onClick={handleCancel} className="bg-red-600 cursor-pointer text-white px-3 py-1 rounded-md">Cancel</button>
+          <button onClick={handleMessage} className="bg-[#203f9a] cursor-pointer text-white px-3 py-1 rounded-md">Message</button>
         </td>
       </tr>
     ));

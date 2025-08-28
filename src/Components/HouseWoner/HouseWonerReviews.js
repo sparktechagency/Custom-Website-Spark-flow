@@ -39,7 +39,6 @@ const HouseWonerReviews = () => {
         setCurrentPage(page);
     };
 
-
     const handleFeedback = () => {
         // show Swal with message box and review icons selectable
         const starRatingHtml = `

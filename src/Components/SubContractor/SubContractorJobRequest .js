@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
-const SubContractorJobRequest  = () => {
+const SubContractorJobRequest = () => {
   // State to manage active tab and data
   const [activeTab, setActiveTab] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
@@ -43,6 +44,23 @@ const SubContractorJobRequest  = () => {
     setCurrentPage(1); // Reset to first page on tab change
   };
 
+  const handleAccept = () => {
+
+    Swal.fire({
+      title: "Accepted!",
+      text: "Job request has been accepted.",
+      icon: "success"
+    });
+
+  };
+  const handleCancel = () => {
+    Swal.fire({
+      title: "Cancelled!",
+      text: "Job request has been cancelled.",
+      icon: "error"
+    });
+  };
+
   const renderJobRequests = () => {
     const startIndex = (currentPage - 1) * rowsPerPage;
     const endIndex = startIndex + rowsPerPage;
@@ -56,9 +74,9 @@ const SubContractorJobRequest  = () => {
         <td className='py-3 px-5'>{job.service}</td>
         <td className='py-3 px-5'>{job.date}</td>
         <td className='py-3 px-5 flex items-center justify-center gap-2'>
-          <button className="bg-green-500 text-white px-3 py-1 rounded-md">Accept</button>
-          <button className="bg-red-600 text-white px-3 py-1 rounded-md">Cancel</button>
-          <button className="bg-[#ded317] text-white px-3 py-1 rounded-md">Message</button>
+          <button onClick={handleAccept} className="bg-green-500 text-white px-3 py-1 rounded-md cursor-pointer">Accept</button>
+          <button onClick={handleCancel} className="bg-red-600 text-white px-3 py-1 rounded-md cursor-pointer">Cancel</button>
+          <button className="bg-[#ded317] text-white px-3 py-1 rounded-md cursor-pointer">Message</button>
         </td>
       </tr>
     ));
@@ -114,4 +132,4 @@ const SubContractorJobRequest  = () => {
   );
 };
 
-export default SubContractorJobRequest ;
+export default SubContractorJobRequest;

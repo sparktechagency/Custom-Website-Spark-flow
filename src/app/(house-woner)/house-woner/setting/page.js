@@ -1,7 +1,7 @@
 'use client';
-import ContractorChangePass from '@/Components/Contractor/ContractorChangePass';
-import ContractorEmailPhone from '@/Components/Contractor/ContractorEmailPhone';
-import ContractorNotification from '@/Components/Contractor/ContractorNotification';
+import HouseWonerChangePass from '@/Components/HouseWoner/HouseWonerChangePass';
+import HouseWonerEmailPhone from '@/Components/HouseWoner/HouseWonerEmailPhone';
+import HouseWonerNotification from '@/Components/HouseWoner/HouseWonerNotification';
 import icons from '@/icons/icon';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -43,17 +43,17 @@ const Page = () => {
                     {/* Tab Content */}
                     {activeTab === '1' && (
                         <div className="space-y-4 p-5 bg-gray-200 rounded-r-xl rounded-bl-xl">
-                            <ContractorChangePass />
+                            <HouseWonerChangePass />
                         </div>
                     )}
                     {activeTab === '2' && (
                         <div className="space-y-4 p-5 bg-gray-200 rounded-xl">
-                            <ContractorEmailPhone />
+                            <HouseWonerEmailPhone />
                         </div>
                     )}
                     {activeTab === '3' && (
                         <div className="space-y-4 p-5 bg-gray-200 rounded-xl">
-                            <ContractorNotification />
+                            <HouseWonerNotification />
                         </div>
                     )}
                 </div>

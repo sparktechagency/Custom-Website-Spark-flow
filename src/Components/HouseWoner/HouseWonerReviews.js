@@ -44,6 +44,68 @@ const HouseWonerReviews = () => {
         setCurrentPage(1); // Reset to first page on tab change
     };
 
+
+    const handleFeedback = () => {
+        // show Swal with message box and review icons selectable
+        const starRatingHtml = `
+            <div style="display: flex; justify-content: center; gap: 5px;">
+                <span class="star" style="font-size: 30px; cursor: pointer;">&#9733;</span>
+                <span class="star" style="font-size: 30px; cursor: pointer;">&#9733;</span>
+                <span class="star" style="font-size: 30px; cursor: pointer;">&#9733;</span>
+                <span class="star" style="font-size: 30px; cursor: pointer;">&#9733;</span>
+                <span class="star" style="font-size: 30px; cursor: pointer;">&#9733;</span>
+            </div>
+        `;
+
+        Swal.fire({
+            title: 'Rate Your Experience',
+            html: `
+                ${starRatingHtml}
+                <textarea 
+                    id="feedbackMessage" 
+                    placeholder="Write your feedback here..." 
+                    rows="2" 
+                    style="width: 100%; margin-top: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 5px;">
+                </textarea>
+            `,
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            cancelButtonText: 'Cancel',
+            preConfirm: () => {
+                const rating = document.querySelectorAll('.star.selected').length; // Get selected stars count
+                const feedbackMessage = document.getElementById('feedbackMessage').value; // Get feedback text
+                return { rating, feedbackMessage };
+            },
+            willOpen: () => {
+                // Add event listener to stars for selecting rating
+                const stars = document.querySelectorAll('.star');
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                        // Highlight selected stars up to clicked one
+                        stars.forEach((s, i) => {
+                            if (i <= index) {
+                                s.classList.add('selected');
+                                s.style.color = 'gold'; // Selected stars in gold
+                            } else {
+                                s.classList.remove('selected');
+                                s.style.color = ''; // Unselected stars revert to default color
+                            }
+                        });
+                    });
+                });
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const { rating, feedbackMessage } = result.value;
+                if (rating === 0) {
+                    Swal.fire('Oops!', 'Please select a rating!', 'warning');
+                } else {
+                    Swal.fire('Thank You!', `You rated us ${rating} stars. Feedback: ${feedbackMessage}`, 'success');
+                }
+            }
+        });
+    };
+
     const renderJobRequests = () => {
         const startIndex = (currentPage - 1) * rowsPerPage;
         const endIndex = startIndex + rowsPerPage;
@@ -65,7 +127,7 @@ const HouseWonerReviews = () => {
                     }
                 </td>
                 <td className='py-3 px-5 gap-2'>
-                    <button className="bg-[#203f9a] cursor-pointer text-white px-3 py-1 rounded-md">See Feedback</button>
+                    <button onClick={handleFeedback} className="bg-[#203f9a] cursor-pointer text-white px-3 py-1 rounded-md">See Feedback</button>
                 </td>
             </tr>
         ));

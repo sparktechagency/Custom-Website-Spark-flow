@@ -39,11 +39,6 @@ const HouseWonerReviews = () => {
         setCurrentPage(page);
     };
 
-    const handleTabChange = (tab) => {
-        setActiveTab(tab);
-        setCurrentPage(1); // Reset to first page on tab change
-    };
-
 
     const handleFeedback = () => {
         // show Swal with message box and review icons selectable
